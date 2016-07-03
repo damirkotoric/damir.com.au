@@ -240,8 +240,11 @@ table {
   100% {
     transform: scale(0); } }
 .hero {
-  background: linear-gradient(to right, #1f3e7d, #496397);
-  color: #f9f9f9;
+  background-color: #496397;
+  background-image: url(../images/damir-ga-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -273,7 +276,8 @@ table {
       padding-right: 17.59259%; } }
 
 .hero__showreel {
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+  background: #000;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
   margin-bottom: 30px;
   position: relative;
   padding-bottom: 56.25%;
@@ -306,7 +310,7 @@ table {
       top: -19px; } }
 
 .posts {
-  background: #0a152e;
+  background: #07090d;
   min-height: 500px;
   overflow: hidden;
   position: relative; }
@@ -322,7 +326,7 @@ table {
     position: relative;
     z-index: 1; }
   .posts li {
-    border-top: 1px solid #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
     position: relative; }
   .posts a {
