@@ -6,12 +6,9 @@ $(document).ready(function() {
 
 function loadMediumPosts() {
   $.ajax({
-    url: "https://frozen-harbor-32065.herokuapp.com/?url=https://medium.com/@damirkotoric/latest?format=json",
-    context: {},
-    success: function(data) {
-      console.log(data)
-      console.log(data.replace('jsonp(])}while(1);</x>', ''))
-      var json = JSON.parse(data.replace('jsonp(])}while(1);</x>', ''))
+    url: "https://frozen-harbor-32065.herokuapp.com?url=https://medium.com/@damirkotoric/latest?format=json",
+    complete: function(data) {
+      var json = JSON.parse(data.responseText.replace('])}while(1);</x>', ''))
       showPosts(json)
     }
   });
