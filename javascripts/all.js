@@ -6,11 +6,13 @@ $(document).ready(function() {
 
 function loadMediumPosts() {
   $.ajax({
-    crossOrigin: true,
+    proxy: "https://frozen-harbor-32065.herokuapp.com",
     url: "https://medium.com/@damirkotoric/latest?format=json",
     context: {},
     success: function(data) {
-      var json = JSON.parse(data.replace('])}while(1);</x>', ''))
+      console.log(data)
+      console.log(data.replace('jsonp(])}while(1);</x>', ''))
+      var json = JSON.parse(data.replace('jsonp(])}while(1);</x>', ''))
       showPosts(json)
     }
   });
