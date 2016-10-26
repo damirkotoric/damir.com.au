@@ -6,8 +6,7 @@ $(document).ready(function() {
 
 function loadMediumPosts() {
   $.ajax({
-    proxy: "https://frozen-harbor-32065.herokuapp.com",
-    url: "https://medium.com/@damirkotoric/latest?format=json",
+    url: "https://frozen-harbor-32065.herokuapp.com/?url=https://medium.com/@damirkotoric/latest?format=json",
     context: {},
     success: function(data) {
       console.log(data)
