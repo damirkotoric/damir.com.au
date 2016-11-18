@@ -13,7 +13,7 @@
   <meta name="google-site-verification" content="xns4J7VsDFSTLxgBa_X2MTO07TVjiNPfkIIs0uoJh1w" />
 
   <!-- Use title if it's in the page YAML frontmatter -->
-      <title>Damir Kotorić</title>
+  <title>Damir Kotorić — Designer, nerd, photographer, teacher, drone-flyer, semi-digital nomad, iOS developer.</title>
 
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png" />
@@ -35,6 +35,7 @@
       <div class="hero__showreel">
         <iframe src="https://player.vimeo.com/video/162033475?title=0&byline=0&portrait=0&color=ffffff" width="778" height="437" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
+    <p><a class="button -video" href="https://vimeo.com/162033475" target="_blank">Take a glimpse at my work</a></p>
       <h1>I’m a <a href="http://inside.envato.com/reflections-on-remote-working/" target="_blank">semi-nomadic</a> designer often found in Australia. In the last 7 years I've most notably worked as a UXer for <a href="https://medium.com/think-big-work-smart/looking-back-at-2-5-years-at-envato-b126d2d9873f" target="_blank">Envato</a> and as lead instructor teaching <a href="https://medium.com/@damirkotoric/three-intense-months-of-teaching-ux-design-at-general-assembly-8b15a929ca97" target="_blank">General Assembly's UX Design Immersive</a>. I've recently experimented with drone photography. Now I’m pitching <a href="https://www.kickstarter.com/projects/damirkotoric/minihero-help-and-be-helped-by-people-around-you" target="_blank">Minihero</a>, an app designed to help people help one another.</h1>
       <p>Catch me on <a href="https://twitter.com/damirkotoric" target="_blank">Twitter</a>, <a href="https://au.linkedin.com/in/damirkotoric" target="_blank">LinkedIn</a> and <a href="https://medium.com/@damirkotoric" target="_blank">Medium</a>, where you can also <a href="https://medium.com/@damirkotoric/damir-s-portfolio-9f81d129d87b" target="_blank">find my portfolio</a>.</p>
       <img class="hero__signature" src="images/signature.svg" alt="Damir Kotorić">
@@ -43,13 +44,41 @@
 </section>
 
 <section id="posts" class="posts">
+  <div class="posts__nav">
+    <a class="-is-active" href="">Highlights</a>
+    <!-- <a href="">Latest posts</a> -->
+  </div>
   <div id="spinner" class="spinner">
     <div>
       <div class="spinner__dot1"></div>
       <div class="spinner__dot2"></div>
     </div>
   </div>
-  <ul>
+  <ul class="posts__list -highlights">
+    <li>
+      <a href="https://medium.com/@damirkotoric/damir-s-portfolio-9f81d129d87b" target="_blank">
+        <h3>Damir's Portfolio</h3>
+        <div style="background-image: url(https://cdn-images-1.medium.com/1*oFmHmJXE5_oi0rHfyHsMpQ.jpeg)"></div>
+      </a>
+      <a href="https://medium.com/@damirkotoric/what-if-helping-your-fellow-human-being-was-as-easy-as-hailing-an-%C3%BCber-2bfa7ae8ccda#.brwecx2g6" target="_blank">
+        <h3>What if helping your fellow human being was as easy as hailing an Über?</h3>
+        <div style="background-image: url(https://cdn-images-1.medium.com/max/2000/1*wPjeEUcIASNF_hKry0VXcg.jpeg)"></div>
+      </a>
+      <a href="https://medium.theuxblog.com/three-intense-months-of-teaching-ux-design-at-general-assembly-8b15a929ca97#.8uhi5xwq0" target="_blank">
+        <h3>Three intense months of teaching UX Design at General Assembly</h3>
+        <div style="background-image: url(https://cdn-images-1.medium.com/max/2000/1*2T-14_cgMyHlR6Uw1ZyIkA.jpeg)"></div>
+      </a>
+      <a href="https://medium.com/@damirkotoric/i-quit-my-day-job-to-fly-drones-8ad9a680602f#.xxteozvfb" target="_blank">
+        <h3>I quit my day job to fly drones</h3>
+        <div style="background-image: url(https://cdn-images-1.medium.com/max/2000/1*GmmjqbFnmHjsFgIKEODuAg.jpeg)"></div>
+      </a>
+      <a href="https://medium.com/think-big-work-smart/looking-back-at-2-5-years-at-envato-b126d2d9873f#.6kxqsr2ty" target="_blank">
+        <h3>Looking back at 2.5 years at Envato</h3>
+        <div style="background-image: url(https://cdn-images-1.medium.com/max/2000/1*YmaQrzB4cFTW_l5rKzlp1w.jpeg)"></div>
+      </a>
+    </li>
+  </ul>
+  <ul class="posts__list -latest">
     <script id="handlebars-posts" type="text/x-handlebars-template">
       {{#each posts}}
       <li>
@@ -61,6 +90,9 @@
       {{/each}}
     </script>
   </ul>
+  <div class="posts__footer">
+    <p><a href="https://medium.com/@damirkotoric/" target="_blank">Read more of my posts on medium.com</a></p>
+  </div>
 </section>
 
 

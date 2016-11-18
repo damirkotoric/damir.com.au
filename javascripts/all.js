@@ -34,7 +34,7 @@ function showPosts(obj) {
   console.log(posts)
   var context = { 'posts': posts }
   var html = template(context)
-  $("#posts").addClass("-loaded").find("> ul").append(html)
+  $("#posts").addClass("-loaded").find(".posts__list.-latest").append(html)
   $("#spinner").one('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend', function(e) {
     $(this).addClass("-hidden")
   });
