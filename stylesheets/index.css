@@ -268,10 +268,10 @@ table {
       color: #496397; }
     .hero a:hover {
       border-bottom: 2px solid rgba(255, 255, 255, 0.7);
-      color: #e6e6e6;
+      color: #384c75;
       text-decoration: none; }
     .hero a:active {
-      color: #cccccc; }
+      color: #283652; }
 
 .hero__content {
   padding-left: 20px;
