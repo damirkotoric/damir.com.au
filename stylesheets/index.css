@@ -247,11 +247,10 @@ table {
   color: #ffffff;
   display: flex;
   align-items: center;
-  min-height: 90vh;
-  padding: 30px 0; }
+  padding: 60px 0; }
   @media (min-width: 640px) {
     .hero {
-      padding: 90px 0 90px; } }
+      padding: 120px 0 120px; } }
   .hero > div {
     max-width: 1200px;
     margin-left: auto;
@@ -279,31 +278,13 @@ table {
 
 .hero__content {
   padding-left: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  position: relative;
+  z-index: 1; }
   @media (min-width: 640px) {
     .hero__content {
       padding-left: 17.59259%;
       padding-right: 17.59259%; } }
-
-.hero__showreel {
-  display: none;
-  background: #000;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
-  margin-bottom: 30px;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  @media (min-width: 640px) {
-    .hero__showreel {
-      margin-bottom: 60px; } }
-  .hero__showreel object, .hero__showreel embed, .hero__showreel iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
 
 .hero__signature {
   display: inline-block;
@@ -320,37 +301,50 @@ table {
       height: 25px;
       top: -19px; } }
 
-.posts {
-  background: #ffffff;
-  min-height: 500px;
-  overflow: hidden;
-  position: relative; }
-  @media (min-width: 640px) {
-    .posts {
-      min-height: 800px;
-      margin-bottom: 60px; } }
-  .posts.-loaded .spinner {
-    animation: fadeOut 0.5s;
-    visibility: hidden; }
-  .posts.-loaded li {
-    animation: fadeIn 0.3s; }
+.showreel {
+  overflow: hidden; }
+  .showreel > div {
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    margin-bottom: 30px; }
+    @media (min-width: 640px) {
+      .showreel > div {
+        margin-bottom: 60px; } }
+  .showreel object, .showreel embed, .showreel iframe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
-.posts__nav {
+.tabview__view {
+  display: none; }
+  .tabview__view.-is-active {
+    display: block; }
+
+.tabview__nav {
   padding-left: 20px;
   padding-right: 20px;
-  margin: 30px 0 30px;
-  text-align: center; }
+  margin: 30px 0 30px; }
   @media (min-width: 640px) {
-    .posts__nav {
+    .tabview__nav {
       padding-left: 17.59259%;
       padding-right: 17.59259%;
-      margin: 60px 0 60px; } }
-  .posts__nav a {
+      margin: 60px 0 60px;
+      text-align: center; } }
+  .tabview__nav a {
     color: #aaaaaa;
-    padding: 0 30px;
+    margin-right: 30px;
     position: relative;
     transition: all 0.3s; }
-    .posts__nav a::after {
+    @media (min-width: 640px) {
+      .tabview__nav a {
+        margin-right: 0;
+        padding: 20px 30px; } }
+    .tabview__nav a::after {
       background: #aaaaaa;
       bottom: -10px;
       content: "";
@@ -363,56 +357,71 @@ table {
       transition: all 0.3s;
       transform: translate(-50%, 0); }
       @media (min-width: 640px) {
-        .posts__nav a::after {
-          bottom: -15px; } }
-    .posts__nav a.-is-active, .posts__nav a.-is-active:hover {
+        .tabview__nav a::after {
+          bottom: 0; } }
+    .tabview__nav a.-is-active, .tabview__nav a.-is-active:hover {
       color: #496397; }
-    .posts__nav a.-is-active::after, .posts__nav a.-is-active:hover::after {
+    .tabview__nav a.-is-active::after, .tabview__nav a.-is-active:hover::after {
       background: #496397;
       opacity: 1;
       width: 30px; }
-    .posts__nav a:hover {
+    .tabview__nav a:hover {
       color: #919191;
       text-decoration: none; }
-    .posts__nav a:hover::after {
+    .tabview__nav a:active {
+      color: #384c75;
+      transition: none; }
+    .tabview__nav a:hover::after {
       opacity: 1;
       width: 20px; }
 
-.posts__list {
+.posts {
+  background: #ffffff;
+  min-height: 500px;
+  overflow: hidden;
+  position: relative;
   margin: 0 auto;
   max-width: 1170px; }
-  .posts__list.-latest {
-    display: none; }
-  .posts__list ul {
+  @media (min-width: 640px) {
+    .posts {
+      min-height: 800px;
+      margin-bottom: 30px; } }
+  .posts.-loaded .spinner {
+    animation: fadeOut 0.5s;
+    visibility: hidden; }
+  .posts.-loaded li {
+    animation: fadeIn 0.3s; }
+  .posts ul {
     position: relative;
     z-index: 1; }
-  .posts__list li {
+  .posts li {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
     position: relative; }
-  .posts__list a {
+  .posts a {
     background: #07090d;
     display: block;
     height: 300px;
     width: 100%;
+    margin-bottom: 30px;
     overflow: hidden;
     z-index: 1;
     position: relative; }
     @media (min-width: 640px) {
-      .posts__list a {
+      .posts a {
         height: 500px; } }
     @media (min-width: 1170px) {
-      .posts__list a {
+      .posts a {
         border-radius: 3px;
         margin-bottom: 60px; } }
-    .posts__list a:hover {
+    .posts a:hover {
       text-decoration: none; }
-      .posts__list a:hover > div {
+      .posts a:hover > div {
         opacity: 0.55;
         transform: scale(1.05);
         transition: transform 12s, opacity 1s;
         filter: grayscale(0%); }
-    .posts__list a > div {
+    .posts a > div {
       background-position: 50% 50%;
       background-size: cover;
       position: absolute;
@@ -424,7 +433,7 @@ table {
       transition: transform 4s, opacity 1s;
       z-index: 0;
       filter: grayscale(30%); }
-  .posts__list h3 {
+  .posts h3 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -437,19 +446,25 @@ table {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1; }
-    .posts__list h3:after {
+    .posts h3:after {
       content: " ";
       display: block;
       clear: both; }
     @media (min-width: 640px) {
-      .posts__list h3 {
+      .posts h3 {
         padding-left: 9.25926%;
         padding-right: 9.25926%;
         font-size: 40px;
         text-align: center; } }
 
 .posts__footer {
-  text-align: center; }
+  margin-bottom: 90px;
+  padding: 0 20px;
+  text-align: left; }
+  @media (min-width: 640px) {
+    .posts__footer {
+      margin-bottom: 120px;
+      text-align: center; } }
 
 .spinner {
   height: 300px;

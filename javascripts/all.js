@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   loadMediumPosts()
+  $(".tabview__nav a").on("click", showSection)
 })
 
 function loadMediumPosts() {
@@ -21,7 +22,6 @@ function showPosts(obj) {
   var posts = []
   $.each(jsonPosts, function(key, value) {
     $jsonPost = $(value)[0]
-    console.log($jsonPost)
     if ($jsonPost["inResponseToPostId"] == "") {
       post = {
         title: $jsonPost["title"],
@@ -31,11 +31,21 @@ function showPosts(obj) {
       posts.push(post)
     }
   })
-  console.log(posts)
   var context = { 'posts': posts }
   var html = template(context)
-  $("#posts").addClass("-loaded").find(".posts__list.-latest").append(html)
+  $("#latest-posts").append(html)
   $("#spinner").one('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend', function(e) {
     $(this).addClass("-hidden")
   });
+}
+
+function showSection(e) {
+  e.preventDefault()
+  // Hide everything
+  $(".tabview__nav a").removeClass("-is-active")
+  $(".tabview__view").removeClass("-is-active")
+  // Show the right thing
+  $(e.currentTarget).addClass("-is-active")
+  var indexToShow = ($(e.currentTarget).index()+1)
+  $(".tabview__view:nth-child(" + indexToShow + ")").addClass("-is-active")
 }
