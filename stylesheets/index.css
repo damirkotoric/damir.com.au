@@ -320,6 +320,11 @@ table {
     width: 100%;
     height: 100%; }
 
+.showreel__noautoplayfallback {
+  display: none; }
+  .no-videoautoplay .showreel__noautoplayfallback {
+    display: block; }
+
 .tabview__view {
   display: none; }
   .tabview__view.-is-active {

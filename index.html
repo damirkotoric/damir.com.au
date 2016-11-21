@@ -24,7 +24,7 @@
   <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,900&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/ico" href="/images/favicon.ico" />
   <link href="stylesheets/index.css" rel="stylesheet" />
-  <script src="javascripts/fast_click.js"></script><script src="javascripts/handlebars.js"></script><script src="javascripts/jquery.js"></script><script src="javascripts/all.js"></script>
+  <script src="javascripts/fast_click.js"></script><script src="javascripts/modernizr.js"></script><script src="javascripts/handlebars.js"></script><script src="javascripts/jquery.js"></script><script src="javascripts/all.js"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 
@@ -38,13 +38,15 @@
       <p>Catch me on <a href="https://twitter.com/damirkotoric" target="_blank">Twitter</a>, <a href="https://au.linkedin.com/in/damirkotoric" target="_blank">LinkedIn</a> and <a href="https://medium.com/@damirkotoric" target="_blank">Medium</a>.</p>
       <img class="hero__signature" src="images/signature.svg" alt="Damir Kotorić">
     </div>
-
   </div>
 </section>
 
 <div class="showreel">
   <div>
     <iframe src="https://player.vimeo.com/video/192249260?title=0&byline=0&portrait=0&color=ffffff&background=1" width="778" height="437" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="showreel__noautoplayfallback">
+      <iframe src="https://player.vimeo.com/video/192249260?title=0&byline=0&portrait=0&color=ffffff" width="778" height="437" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
