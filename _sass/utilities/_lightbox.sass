@@ -1,0 +1,68 @@
+// MediumLightbox style
+// https://github.com/davidecalignano/MediumLightbox
+
+.zoom
+  > div
+    position: relative
+  &.-zooming
+    .aspect-ratio-fill
+      overflow: visible
+    .lazy__blur
+      display: none
+
+.scrollbar-measure
+  width: 100px
+  height: 100px
+  overflow: scroll
+  position: absolute
+  top: -9999px
+
+.zoom__img
+  display: block
+  margin: auto
+  max-width: 100%
+  position: absolute
+  top: 0
+  left: 0
+
+.zoom__img
+  cursor: pointer
+  cursor: -webkit-zoom-in
+  backface-visibility: hidden
+  height: auto
+
+.zoom .zoomImg,
+.zoom .zoomImg-wrap
+  position: relative
+  z-index: 900
+  transition: transform 300ms
+
+.zoom .zoomImg-wrap--absolute
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.zoom .zoomImg
+  outline: none
+  cursor: pointer
+  cursor: -webkit-zoom-out
+
+.zoom .zoomOverlay.show
+  opacity: 1
+  visibility: visible
+
+.zoom .zoomOverlay
+  z-index: 800
+  background: white
+  position: fixed
+  transition: opacity 300ms
+  opacity: 0
+  cursor: pointer
+  cursor: -webkit-zoom-out
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  visibility: hidden

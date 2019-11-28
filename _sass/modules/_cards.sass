@@ -1,0 +1,447 @@
+.cards
+  background-color: $color_grey_50
+  > div
+    +containerContent
+    position: relative
+    z-index: 10
+  img
+    display: block
+    height: 100%
+    max-width: 100%
+    min-height: 100%
+    object-fit: cover
+
+.cardsRow
+  @media (min-width: $breakpoint_1)
+    display: flex
+    justify-content: space-between
+    padding-bottom: 20px
+  @media (min-width: $breakpoint_2)
+    padding-bottom: 40px
+  &:last-child
+    padding-bottom: 0
+
+.cardsCard
+  border-radius: 5px
+  display: block
+  overflow: hidden
+  width: 100%
+  @media (max-width: $breakpoint_1)
+    margin-bottom: 20px
+  @media (min-width: $breakpoint_2)
+    border-radius: 10px
+
+  &.-pop
+    box-shadow: 0 5px 40px rgba(mix($color_primary_900, black, 50%), 0.5)
+    border-radius: 10px
+    @media (min-width: $breakpoint_2)
+      border-radius: 20px
+    &:active
+      box-shadow: 0 5px 40px rgba(mix($color_primary_300, black, 50%), 0.5)
+
+  &.-overlay
+    position: relative
+    &::before
+      border-radius: inherit
+      content: ''
+      left: 0
+      height: 100%
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 2
+    .cardsCardImage
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 0
+    .cardsCardContent
+      padding: 20px
+      position: relative
+      z-index: 3
+      @media (min-width: $breakpoint_1)
+        padding: 30px
+      @media (min-width: $breakpoint_2)
+        padding: 40px
+      h3
+        color: $color_grey_800
+      p
+        +body2
+        color: $color_grey_700
+        &:last-child
+          margin-bottom: 0.5em
+
+  &.-dark
+    background: $color_primary_900
+    .cardsCardContent
+      h3
+        color: white
+      p
+        color: $color_grey_100
+      a
+        color: $color_primary_300
+        &:hover
+          color: $color_primary_400
+        &:active
+          color: $color_primary_500
+
+  &.-nofade
+    &::before
+      display: none
+
+  &.-peabody
+    align-items: flex-end
+    display: flex
+    height: 350px
+    @media (min-width: $breakpoint_1)
+      height: 500px
+    @media (min-width: $breakpoint_2)
+      height: 760px
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 30%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+
+  &.-experience
+    background-image: linear-gradient(160deg, $color_primary_500, $color_primary_900)
+    text-align: center
+    user-select: none
+    @media (min-width: $breakpoint_1)
+      width: calc(40% - 20px)
+    @media (min-width: $breakpoint_2)
+      width: calc(40% - 40px)
+    h3
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      background: -webkit-linear-gradient($color_primary_50, $color_primary_300)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      color: $color_primary_100
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif
+      font-size: 100px
+      font-weight: 500
+      @media (min-width: $breakpoint_2)
+        font-size: 180px
+    p
+      color: $color_primary_100
+      margin-top: 10px
+    img
+      display: inline-block
+      margin-bottom: 30px
+      @media (min-width: $breakpoint_2)
+        margin-bottom: 60px
+    .cardsCardInner
+      color: white
+
+  &.-designProcess
+    align-items: flex-end
+    display: flex
+    height: 300px
+    @media (min-width: $breakpoint_1)
+      height: auto
+      width: 60%
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 30%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+    img
+      object-fit: cover
+
+  &.-zjumaa
+    align-items: flex-end
+    display: flex
+    height: 300px
+    @media (min-width: $breakpoint_1)
+      height: auto
+      width: calc(50% - 10px)
+    @media (min-width: $breakpoint_2)
+      height: 500px
+      width: calc(50% - 20px)
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 30%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+
+  &.-iarps
+    align-items: flex-end
+    display: flex
+    height: 350px
+    @media (min-width: $breakpoint_1)
+      width: calc(50% - 10px)
+    @media (min-width: $breakpoint_2)
+      height: auto
+      width: calc(50% - 20px)
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 30%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+
+  &.-harvardBuilding
+    height: 250px
+    @media (min-width: $breakpoint_1)
+      height: auto
+      width: calc(30% - 10px)
+    @media (min-width: $breakpoint_2)
+      width: calc(30% - 20px)
+
+  &.-harvard
+    background-image: linear-gradient(160deg, mix($color_primary_50, $color_grey_50, 50%), mix($color_primary_100, $color_grey_100, 50%))
+    text-align: center
+    @media (min-width: $breakpoint_1)
+      width: calc(40% - 20px)
+    @media (min-width: $breakpoint_2)
+      width: calc(40% - 40px)
+    .cardsCardInner
+      border: 10px solid rgba(black, 0.05)
+      padding: 70px 20px 60px
+      @media (min-width: $breakpoint_2)
+        padding: 100px 20px
+    p
+      margin: 2em 0 1em
+    img
+      height: auto
+      margin: 0 auto
+      object-fit: contain
+      width: 60%
+
+  &.-gizaARShowcase
+    height: 250px
+    @media (min-width: $breakpoint_1)
+      height: auto
+      width: calc(30% - 10px)
+    @media (min-width: $breakpoint_2)
+      width: calc(30% - 20px)
+
+  &.-ideaverseFlow
+    align-items: flex-end
+    border: 1px solid $color_grey_300
+    display: flex
+    height: 300px
+    position: relative
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_100, white, 50%), 0) 0%, rgba(mix($color_primary_100, white, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_100, white, 50%), 0) 30%, rgba(mix($color_primary_100, white, 50%), 0.95) 80%)
+    &::after
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+    @media (min-width: $breakpoint_1)
+      height: 400px
+    @media (min-width: $breakpoint_2)
+      height: 700px
+
+  &.-gizaAR
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.9) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(to right, rgba(mix($color_primary_900, black, 50%), 0.8) 0%, rgba(mix($color_primary_900, black, 50%), 0) 100%)
+    .cardsCardContent
+      margin-top: 200px
+      @media (min-width: $breakpoint_2)
+        margin-top: 0
+        padding-bottom: 100px
+        padding-top: 100px
+        width: 45%
+
+  &.-storyverse
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0.7) 0%, rgba(mix($color_primary_900, black, 50%), 0) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(160deg, rgba(mix($color_primary_900, black, 50%), 0.7) 0%, rgba(mix($color_primary_900, black, 50%), 0) 70%)
+    @media (min-width: $breakpoint_1)
+      width: calc(40% - 40px)
+    .cardsCardContent
+      margin-bottom: 300px
+      @media (min-width: $breakpoint_2)
+        margin-bottom: 500px
+
+  &.-orpheus
+    background-color: $color_grey_50
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0.9) 0%, rgba(mix($color_primary_900, black, 50%), 0) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(160deg, rgba(mix($color_primary_900, black, 50%), 0.9) 0%, rgba(mix($color_primary_900, black, 50%), 0) 70%)
+    @media (min-width: $breakpoint_1)
+      width: calc(60%)
+    .cardsCardImage
+      padding-bottom: 160px
+      @media (min-width: $breakpoint_2)
+        padding-bottom: 250px
+    .cardsCardContent
+      margin-top: 300px
+      @media (min-width: $breakpoint_2)
+        margin-bottom: 0
+        margin-top: 500px
+
+  &.-booking
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 30%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+    @media (min-width: $breakpoint_1)
+      width: calc(50% - 20px)
+    .cardsCardContent
+      margin-top: 200px
+      @media (min-width: $breakpoint_2)
+        margin-top: 300px
+
+  &.-zjumaa2
+    &::before
+      background-image: linear-gradient(to bottom, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.9) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+    @media (min-width: $breakpoint_1)
+      width: calc(50% - 20px)
+    .cardsCardContent
+      margin-top: 200px
+      @media (min-width: $breakpoint_2)
+        margin-top: 300px
+
+  &.-guidance
+    &::before
+      background-image: linear-gradient(to right, rgba(mix($color_primary_900, black, 50%), 0.9) 30%, rgba(mix($color_primary_900, black, 50%), 0) 100%)
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(190deg, rgba(mix($color_primary_900, black, 50%), 0) 0%, rgba(mix($color_primary_900, black, 50%), 0.85) 80%)
+    @media (min-width: $breakpoint_2)
+      width: 100%
+    .cardsCardContent
+      padding-top: 120px
+      @media (min-width: $breakpoint_1)
+        padding-bottom: 80px
+        padding-top: 80px
+        width: 45%
+      @media (min-width: $breakpoint_2)
+        padding-bottom: 100px
+        padding-left: 80px
+        padding-top: 100px
+
+  &.-design
+    background: white
+    @media (min-width: $breakpoint_1)
+      width: calc(40%)
+    &::before
+      @media (min-width: $breakpoint_2)
+        background-image: linear-gradient(to bottom, rgba(white, 0) 50%, rgba(white, 1) 100%)
+    .cardsCardImage
+      padding-bottom: 70px
+      padding-top: 20px
+      @media (min-width: $breakpoint_2)
+        padding-bottom: 150px
+        padding-top: 50px
+    .cardsCardContent
+      margin-top: 200px
+      @media (min-width: $breakpoint_2)
+        margin-bottom: 0
+        margin-top: 500px
+        text-align: center
+
+  &.-development
+    background: white
+    @media (min-width: $breakpoint_1)
+      width: calc(60% - 20px)
+    @media (min-width: $breakpoint_2)
+      width: calc(60% - 40px)
+    &::before
+      +scrimGradient(white, "to top")
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      height: 250px
+      bottom: 70px
+      top: auto
+      @media (min-width: $breakpoint_2)
+        height: 250px
+        bottom: 170px
+    .cardsCardImage
+      padding-bottom: 70px
+      @media (min-width: $breakpoint_2)
+        padding-bottom: 170px
+    .cardsCardContent
+      margin-top: 200px
+      @media (min-width: $breakpoint_2)
+        margin-bottom: 0
+        margin-top: 500px
+        text-align: center
+
+  // &.-workshop
+  //   background: white
+  //   @media (min-width: $breakpoint_1)
+  //     width: calc(50% - 20px)
+  //   @media (min-width: $breakpoint_2)
+  //     width: calc(50% - 40px)
+  //   &::before
+  //     +scrimGradient(white, "to top")
+  //     border-bottom-left-radius: 0
+  //     border-bottom-right-radius: 0
+  //     height: 300px
+  //     bottom: 70px
+  //     top: auto
+  //     @media (min-width: $breakpoint_2)
+  //       bottom: 120px
+  //   .cardsCardImage
+  //     padding-bottom: 70px
+  //     @media (min-width: $breakpoint_2)
+  //       padding-bottom: 120px
+  //   .cardsCardContent
+  //     margin-top: 200px
+  //     @media (min-width: $breakpoint_2)
+  //       margin-bottom: 0
+  //       margin-top: 400px
+  //       text-align: center
+
+  &.-automation
+    background: white
+    &::before
+      +scrimGradient(white, "to top")
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      bottom: 40px
+      height: 100%
+      top: auto
+      @media (min-width: $breakpoint_1)
+        +scrimGradient(white, "to right")
+        bottom: 0
+    .cardsCardContent
+      padding-top: 120px
+      @media (min-width: $breakpoint_1)
+        padding-bottom: 100px
+        padding-top: 100px
+      @media (min-width: $breakpoint_2)
+        padding-left: 80px
+    .cardsCardImage
+      padding-bottom: 40px
+      @media (min-width: $breakpoint_1)
+        padding-left: 30%
+        padding-bottom: 0
+      @media (min-width: $breakpoint_2)
+        padding-left: 45%
+
+.cardsCardInner
+  +body2
+  align-items: center
+  border: 10px solid rgba(white, 0.2)
+  border-radius: 5px
+  display: flex
+  min-height: 100%
+  padding: 40px 20px 30px
+  @media (min-width: $breakpoint_2)
+    border-radius: 10px
+    padding: 40px 20px 60px
+  p
+    +body2
+    color: $color_grey_700
+    a
+      border-bottom: 2px solid $color_grey_700
+      color: $color_grey_700
+
+.cardsMore
+  padding-bottom: 40px
+  padding-top: 50px
+  text-align: center
+  @media (min-width: $breakpoint_2)
+    padding-bottom: 80px

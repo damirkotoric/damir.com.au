@@ -1,0 +1,49 @@
+.map
+  position: relative
+
+.mapImage
+  img
+    height: auto
+    max-width: 100%
+
+.mapPin
+  background: $color_primary_500
+  border: 2px solid white
+  border-radius: 50%
+  bottom: 11.3%
+  height: 12px
+  position: absolute
+  transform: translateX(3px)
+  right: 9.8%
+  width: 12px
+  @media (min-width: $breakpoint_2)
+    height: 18px
+    width: 18px
+    transform: none
+
+  &::after
+    animation-name: teamMapPinAnimation
+    animation-duration: 4s
+    animation-iteration-count: infinite
+    animation-timing-function: ease-out
+    border: 20px solid $color_primary_500
+    border-radius: 50%
+    content: ""
+    display: block
+    height: 200%
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 200%
+
+@keyframes teamMapPinAnimation
+  0%
+    opacity: 0.5
+    transform: translate(-50%, -50%) scale(0)
+  50%
+    opacity: 0
+    transform: translate(-50%, -50%) scale(3)
+  100%
+    opacity: 0
+    transform: translate(-50%, -50%) scale(3)

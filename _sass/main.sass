@@ -1,0 +1,139 @@
+// @import "utilities/animation"
+@import "utilities/settings"
+@import "utilities/helper"
+@import "utilities/lightbox"
+@import "utilities/reset"
+@import "modules/button"
+@import "modules/cards"
+@import "modules/chapter"
+@import "modules/companies"
+@import "modules/header"
+@import "modules/hero"
+@import "modules/highlight"
+@import "modules/map"
+@import "modules/offering"
+@import "modules/portfolio"
+@import "modules/quote"
+@import "modules/rate"
+@import "modules/rates"
+@import "modules/social"
+
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  background-color: $color_grey_50
+  +body1
+
+  // @media screen and (prefers-color-scheme: dark)
+  //   &
+  //     background-color: $color_grey_900
+  //     color: $color_grey_50
+
+body
+  background: $color_grey_50
+  &.-menu-opened
+    overflow: hidden
+
+h1
+  +h1
+  .page--index &
+    line-height: 0.92
+    span
+      line-height: 1.05
+
+h2
+  +h2
+
+h3
+  +h3
+
+h4
+  +h4
+
+h5
+  +h5
+
+h6
+  +h6
+
+p
+  +body1
+  margin: 15px 0
+  @media (min-width: $breakpoint_2)
+    margin: 30px 0
+
+small
+  display: block
+  font-size: 0.7rem
+  line-height: 1.5
+
+aside
+  float: right
+  margin-bottom: 2rem
+  width: 100%
+  @media (min-width: $breakpoint_2)
+    padding-left: 2rem
+    padding-top: 0.3rem
+    width: 30%
+
+  > small
+    border-top: 1px solid rgba(black, 0.3)
+    padding-top: 1rem
+
+a
+  color: $color_primary_500
+  text-decoration: none
+
+abbr
+  border-bottom: 1px dotted rgba(black, 0.3)
+  text-decoration: none
+
+strong
+  font-weight: 600
+  a
+    font-weight: 600
+
+ul, ol
+  +body1
+  list-style: none
+  margin: 0
+
+ul
+  list-style: disc
+  margin-left: 1em
+
+em
+  font-style: italic
+
+figcaption
+  color: lighten(black, 35%)
+  font-size: 0.7rem
+  line-height: 1.4
+  margin-top: 0.5rem
+
+  a
+    border-width: 1px
+    color: darken($color_grey_500, 5%)
+    &:hover
+      border-width: 1px
+    &:active
+      border-width: 2px
+
+blockquote
+  @extend .quote
+
+video
+  &:focus
+    outline: none
+
+br
+  line-height: 2rem
+
+hr
+  background: $color_grey_100
+  border: none
+  height: 2px
+  margin: 50px auto
+  width: 100px

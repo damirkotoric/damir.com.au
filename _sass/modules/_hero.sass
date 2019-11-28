@@ -1,0 +1,107 @@
+.hero
+  background-color: $color_grey_50
+  position: relative
+
+.heroContent
+  +containerContent
+  padding-bottom: 100px
+  padding-top: 160px
+  position: relative
+  z-index: 1
+  @media (min-width: $breakpoint_2)
+    padding-bottom: 250px
+    padding-top: 230px
+
+  h1, p
+    @media (min-width: $breakpoint_2)
+      text-align: center
+      .-sidebyside &
+        text-align: left
+    .-sidebyside &
+      max-width: 700px
+      text-align: left
+
+  h1
+
+  p
+    color: mix($color_grey_700, $color_primary_500, 80%)
+    @media (min-width: $breakpoint_2)
+      margin-left: auto
+      margin-right: auto
+      max-width: 800px
+      .-sidebyside &
+        margin-left: 0
+        margin-right: 0
+
+.heroImage
+  margin-top: 100px
+  img
+    display: block
+    height: auto
+    width: 100%
+  .-sidebyside &
+    margin-top: 0
+    z-index: 0
+
+    &, & img
+      bottom: 0
+      height: 100%
+      left: 0
+      position: absolute
+      width: 100%
+
+    img
+      display: none
+      object-fit: cover
+      @media (min-width: $breakpoint_2)
+        display: block
+
+    &::after
+      background-image: linear-gradient(to bottom, rgba($color_grey_50, 0), rgba($color_grey_50, 1))
+      bottom: 0
+      content: ''
+      height: 100px
+      left: 0
+      position: absolute
+      width: 100%
+
+.heroQuote
+  +containerContent
+  margin-bottom: 100px
+  margin-top: 50px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 150px
+    margin-top: 100px
+  > blockquote
+    margin: 0 auto
+    @media (min-width: $breakpoint_2)
+      padding-right: 50px
+
+#heroWork, #heroOffering
+  .heroContent
+    padding-bottom: 0
+    @media (min-width: $breakpoint_2)
+      padding-bottom: 0
+  .heroImage
+    +containerPage
+    padding: 0 30px
+    position: relative
+    @media (min-width: $breakpoint_2)
+      padding: 0 80px
+    img
+      display: block
+      width: 100%
+
+#heroWork
+  .heroImage
+    margin-top: 0
+
+#heroOffering
+  .heroImage
+    max-width: 960px
+    @media (max-width: $breakpoint_2)
+      margin-top: 50px
+
+#heroContact
+  h1
+    margin-bottom: 40px

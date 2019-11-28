@@ -1,0 +1,32 @@
+.rates
+  align-items: center
+  background-image: linear-gradient(160deg, $color_primary_700, $color_primary_900)
+  border-radius: 20px
+  box-shadow: 0 5px 40px rgba(mix($color_primary_900, black, 50%), 0.3)
+  display: flex
+  margin: 40px auto
+  max-width: 700px
+  text-align: center
+
+.ratesBox
+  padding: 30px
+  border-bottom: none
+  border-right: 1px solid $color_primary_700
+  width: 50%
+  &:last-child
+    border: none
+
+.ratesBoxOverline
+  +overline
+  color: mix($color_primary_300, $color_grey_600, 50%)
+  margin-bottom: 4px
+  abbr
+    border-bottom-color: mix($color_primary_300, $color_grey_600, 50%)
+
+.ratesBoxValue
+  +h2
+  color: white
+
+.ratesBoxAppendix
+  +body2
+  color: mix($color_primary_300, $color_grey_400, 50%)

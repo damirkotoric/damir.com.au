@@ -1,0 +1,39 @@
+.social
+  align-items: center
+  background: $color_grey_50
+  display: flex
+  justify-content: flex-start
+  margin-bottom: 100px
+  @media (min-width: $breakpoint_2)
+    justify-content: center
+    margin-top: 50px
+
+  a
+    margin: 0 20px 0 0
+    padding: 10px
+    @media (min-width: $breakpoint_2)
+      margin: 0 30px
+    &:nth-child(1)
+      padding-left: 0
+      @media (min-width: $breakpoint_2)
+        padding-left: inherit
+    &:nth-child(2)
+      margin-right: 25px
+      @media (min-width: $breakpoint_2)
+        margin-right: 30px
+    &:hover
+      path
+        fill: $color_primary_500
+    &:active
+      path
+        fill: $color_primary_800
+        transition: none
+
+  svg
+    height: 40px
+    width: auto
+    @media (min-width: $breakpoint_2)
+      height: 60px
+
+  path
+    transition: fill 0.2s

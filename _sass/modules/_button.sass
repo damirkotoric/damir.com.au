@@ -1,0 +1,54 @@
+.button
+  +body1
+  border: 3px solid $color_primary_500
+  border-radius: 100px
+  color: $color_primary_500
+  display: inline-block
+  padding: 15px 50px 15px 20px
+  position: relative
+  transition: all 0.3s
+  user-select: none
+  white-space: nowrap
+  @media (min-width: $breakpoint_2)
+    padding: 15px 70px 15px 40px
+  > svg
+    fill: $color_primary_500
+    height: 16px
+    position: absolute
+    right: 24px
+    top: 50%
+    transform: translateY(-50%)
+    transition: transform 0.2s ease-out
+    @media (min-width: $breakpoint_2)
+      height: 20px
+      right: 35px
+  &:hover
+    background: rgba($color_primary_500, 0.1)
+    > svg
+      transform: translateX(3px) translateY(-50%)
+  &:active
+    background: rgba($color_primary_500, 0.2)
+    transition: none
+    > svg
+      transform: translateX(3px) translateY(-50%) scale(0.9)
+      transition: none
+
+  &.-text
+    border: none
+    border-radius: 0
+    > svg
+      @media (min-width: $breakpoint_2)
+        right: 32px
+    &:hover
+      background: none
+      color: $color_primary_600
+    &:active
+      background: none
+      color: $color_primary_900
+      transition: none
+
+  &.-dark
+    border-color: $color_primary_300
+    color: $color_primary_300
+    > svg
+      fill: $color_primary_300

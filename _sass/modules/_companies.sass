@@ -1,0 +1,136 @@
+.companies
+  background: $color_grey_50
+  > div
+    background: mix($color_grey_100, $color_primary_50, 50%)
+    border-color: $color_grey_200
+    border-style: solid
+    border-bottom-width: 1px
+    border-top-width: 1px
+    margin: 0 auto
+    max-width: 960px
+    padding: 40px 25px
+    position: relative
+    @media (min-width: $breakpoint_1)
+      padding: 60px
+    @media (min-width: $breakpoint_2)
+      border-width: 1px
+      border-radius: 20px
+      padding: 100px
+    &::before
+      background: linear-gradient(to bottom, rgba(white, 0.3) 0%, rgba(white, 0) 100%)
+      content: ''
+      display: block
+      height: 200px
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 0
+      @media (min-width: $breakpoint_1)
+        border-radius: 20px 20px 0 0
+  img
+    display: block
+    height: 100%
+    position: relative
+    z-index: 1
+    @media (min-width: $breakpoint_1)
+      margin: 0 auto
+      width: 100%
+  p
+    +body2
+    a
+      border-bottom: 2px solid $color_grey_200
+      color: black
+      &:hover
+        border-color: $color_grey_400
+      &:active
+        border-color: $color_grey_600
+        transition: none
+
+.companiesItem
+  margin-bottom: 80px
+  @media (min-width: $breakpoint_1)
+    margin-bottom: 150px
+  &.-booking
+    img
+      height: 30px
+      @media (min-width: $breakpoint_1)
+        height: 50px
+  &.-harvard
+    img
+      height: 50px
+      @media (min-width: $breakpoint_1)
+        height: 75px
+  &.-archimedes
+    img
+      height: 35px
+      @media (min-width: $breakpoint_1)
+        height: 55px
+  &.-envato
+    img
+      height: 30px
+      @media (min-width: $breakpoint_1)
+        height: 50px
+  &.-creativeai
+    img
+      height: 43px
+      @media (min-width: $breakpoint_1)
+        height: 70px
+  &.-ga
+    img
+      height: 45px
+      @media (min-width: $breakpoint_1)
+        height: 75px
+
+.companiesMore
+  text-align: center
+
+.companiesMoreList
+  display: flex
+  flex-wrap: wrap
+  margin-top: -20px
+
+.companiesMoreListItem
+  align-items: center
+  display: flex
+  justify-content: center
+  margin-bottom: 20px
+  width: 50%
+  @media (min-width: $breakpoint_1)
+    margin-bottom: 0
+    width: 25%
+  &.-harvard
+    img
+      height: 120px
+      width: 120px
+      @media (min-width: $breakpoint_1)
+        height: 160px
+        width: 160px
+      @media (min-width: $breakpoint_2)
+        height: 200px
+        width: 200px
+  &.-institute
+    img
+      @media (min-width: $breakpoint_1)
+        height: 120px
+        width: 120px
+      @media (min-width: $breakpoint_2)
+        height: 150px
+        width: 150px
+  &.-zhejiang
+    img
+      height: 75px
+      width: 75px
+      @media (min-width: $breakpoint_1)
+        height: 90px
+        width: 90px
+      @media (min-width: $breakpoint_2)
+        height: 120px
+        width: 120px
+  img
+    height: 80px
+    width: 80px
+    @media (min-width: $breakpoint_1)
+      height: 100px
+      width: 100px
+    object-fit: contain

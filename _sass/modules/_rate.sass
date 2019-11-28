@@ -1,0 +1,45 @@
+.rate
+  background: white
+  margin: 0 0 40px
+  overflow: hidden
+  padding: 50px 20px
+  position: relative
+  text-align: left
+  @media (min-width: $breakpoint_2)
+    margin: 0 30px 30px
+    padding: 150px
+    text-align: center
+  &#consultation
+    padding-bottom: 20px
+    @media (min-width: $breakpoint_2)
+      padding-bottom: 50px
+
+  p
+    +body2
+
+.rateInner
+  margin-left: auto
+  margin-right: auto
+  max-width: 770px
+  text-align: left
+  h3
+    margin: 60px 0 15px
+    @media (min-width: $breakpoint_2)
+      margin: 120px 0 30px
+  h6
+    +h6
+    margin: 20px 0 10px
+    @media (min-width: $breakpoint_2)
+      margin: 40px 0 10px
+  p
+    +body2
+    color: $color_grey_700
+
+  a:not(.button)
+    border-bottom: none
+    transition: all 0.3s
+    &:hover
+      color: $color_primary_400
+    &:active
+      color: $color_primary_700
+      transition: none

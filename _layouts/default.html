@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Damir Kotorić">
+
+    <!-- Social media sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@damirkotoric">
+    {% if page.url == "/" %}
+      <meta property="og:title" content="{{ page.title }}">
+    {% else %}
+      <meta property="og:title" content="{{ page.title }} | Damir Kotorić">
+    {% endif %}
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="https://damirkotoric.com">
+    <meta property="og:site_name" content="Damir Kotorić">
+    <meta property="og:image" content="https://damirkotoric.com/images/social.jpg">
+    <meta property="og:image:alt" content="">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Google Webmaster Tools verification (keep it here permanently) -->
+    <meta name="google-site-verification" content="xns4J7VsDFSTLxgBa_X2MTO07TVjiNPfkIIs0uoJh1w" />
+    <!-- Google Cloud verification (keep it here permanently) -->
+    <meta name="google-site-verification" content="XO3xVeFtKxLKDqTERbR2uPxOu96AE4G67UzMKROfU70" />
+
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+    {% if page.url == "/" %}
+      <title>{{ page.title }}</title>
+    {% else %}
+      <title>{{ page.title }} | {{ site.title }}</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script src="{{ "/assets/js/jquery.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  </head>
+  <body class="page--{{ page.path | replace: ".html", "" }}">
+    <div class="header">
+      <div>
+        <div class="headerLogo">
+          <a href="/" aria-label="Home">
+            {% include logo.ext %}
+          </a>
+        </div>
+        <div class="headerBurger">
+          <div class="headerBurgerContainer">
+            <div class="headerBurgerContainerBar -topBar"></div>
+            <div class="headerBurgerContainerBar -btmBar"></div>
+          </div>
+        </div>
+        <div class="headerMenu">
+          <div class="headerMenuItem {% if page.activeNav == 1 %}-active{% endif %}"><a href="/">Overview</a></div>
+          <div class="headerMenuItem {% if page.activeNav == 2 %}-active{% endif %}"><a href="/work">Work</a></div>
+          <div class="headerMenuItem {% if page.activeNav == 3 %}-active{% endif %}"><a href="/offering">Offering</a></div>
+          <div class="headerMenuItem {% if page.activeNav == 4 %}-active{% endif %}"><a href="/contact">Contact</a></div>
+        </div>
+      </div>
+    </div>
+  
+    {{ content }}
+  
+    <script type="text/javascript">
+      // Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36732319-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      </script>
+      <script type="text/javascript">
+      // Mouseflow
+      var _mfq = _mfq || [];
+      (function() {
+        var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/87b21fc6-3e1f-448e-accb-9c3478ca395d.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
+    </script>
+  
+    <!-- Crisp -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e4702544-5c59-4e07-b8eb-d18679219f3b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  </body>
+</html>

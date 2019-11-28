@@ -1,0 +1,209 @@
+// .headerNav
+//   font-size: 12px
+//   font-weight: 500
+//   letter-spacing: 0.6px
+//   @media (min-width: $breakpoint_2)
+//     font-size: 17px
+
+// https://codepen.io/justalever/pen/eRLJjz
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99)
+$menuItems: 6
+
+.header
+  position: absolute
+  top: 0
+  left: 0
+  overflow: hidden
+  transition: all 0.3s ease-out
+  transition-delay: 0.2s
+  width: 100%
+  z-index: 100
+
+  &::before
+    content: ''
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    transition: background 0.4s ease-out
+    width: 100%
+    z-index: -1
+
+  > div
+    +containerPage
+    margin-top: 10px
+    @media (min-width: $breakpoint_2)
+      align-items: center
+      display: flex
+      justify-content: space-between
+      padding: 10px 20px
+    @media (min-width: $breakpoint_3)
+      padding: 10px 50px
+
+  .-menu-opened &
+    background: mix($color_primary_50, white, 20%)
+    height: 100vh
+    transition: all 0.3s ease-in
+    transition-delay: 0.25s
+    z-index: 100
+
+    &::before
+      background: mix($color_primary_50, white, 20%)
+      transition: background 0.5s ease-out
+      transition-delay: 0.25s
+      z-index: 0
+
+.headerLogo
+  align-items: center
+  display: flex
+  float: left
+  height: 50px
+  justify-content: flex-start
+  margin-left: 15px
+  opacity: 1
+  transition: opacity 0.3s
+  transition-delay: 0.3s
+  width: 50px
+  @media (min-width: $breakpoint_2)
+    height: auto
+    width: auto
+  svg
+    height: 24px
+    width: auto
+    @media (min-width: $breakpoint_2)
+      height: 40px
+  .-menu-opened &
+    opacity: 0
+    pointer-events: none
+    transition-delay: 0s
+    z-index: -1
+
+.headerBurger
+  -webkit-tap-highlight-color: transparent
+  cursor: pointer
+  display: block
+  float: right
+  height: 50px
+  margin-right: 5px
+  opacity: 0.2
+  position: relative
+  transform: rotate(0deg)
+  transition: all 0.3s $cubic
+  user-select: none
+  width: 50px
+  @media (min-width: $breakpoint_2)
+    display: none
+  .-menu-opened &
+    transform: rotate(90deg)
+  .-jsReady &
+    opacity: 1
+
+.headerBurgerContainer
+  width: 18px
+  height: 8px
+  position: relative
+  display: block
+  margin: -5px auto 0
+  top: 50%
+
+.headerBurgerContainerBar
+  width: 100%
+  height: 2px
+  display: block
+  position: relative
+  background: black
+  transition: all 0.3s $cubic
+  transition-delay: 0s
+  &.-topBar
+    transform: translateY(0px) rotate(0deg)
+  &.-btmBar
+    transform: translateY(6px) rotate(0deg)
+  .-menu-opened &
+    background: black
+    transition: all 0.4s $cubic
+    transition-delay: 0.2s
+    &.-topBar
+      transform: translateY(4px) rotate(45deg)
+    &.-btmBar
+      transform: translateY(2px) rotate(-45deg)
+
+.headerMenu
+  clear: both
+  pointer-events: none
+  position: relative
+  list-style: none
+  @media (min-width: $breakpoint_2)
+    align-items: center
+    display: flex
+    pointer-events: auto
+  .-menu-opened &
+    pointer-events: auto
+
+.headerMenuItem
+  margin-top: 5px
+  transform: scale(1.1) translateY(-20px)
+  opacity: 0
+  padding: 0px 48px 0
+  position: relative
+  transition: transform 0.3s $cubic, opacity 0.4s $cubic
+  @media (min-width: $breakpoint_2)
+    margin-top: 0
+    opacity: 1
+    padding: 0
+    transform: scale(1) translateY(0)
+  &.-active
+    &::before
+      background: $color_primary_500
+      bottom: 0
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      width: 3px
+      @media (min-width: $breakpoint_2)
+        height: 3px
+        margin: 0 15px
+        width: calc(100% - 30px)
+    a
+      color: $color_primary_500
+
+  .-menu-opened &
+    transform: scale(1) translateY(0px)
+    opacity: 1
+    @for $i from 1 through $menuItems
+      &:nth-child(#{$i})
+        transition-delay: #{0.07 * $i + 0.2}s
+
+  @for $i from 1 through $menuItems
+    &:nth-child(#{$i})
+      transition-delay: #{0.56 - $i * 0.07}s
+
+  a
+    display: block
+    position: relative
+    color: $color_grey_700
+    text-decoration: none
+    font-size: 22px
+    letter-spacing: 0.03em
+    line-height: 2.35
+    font-weight: 500
+    width: 100%
+    @media (min-width: $breakpoint_2)
+      align-items: center
+      color: mix($color_grey_500, $color_primary_500, 60%)
+      display: flex
+      font-size: 17px
+      letter-spacing: 0.05em
+      padding: 0 4px
+      height: 80px
+      padding: 0 20px
+    &:hover
+      color: $color_grey_800
+      transition: color 0.2s
+      @media (min-width: $breakpoint_2)
+        color: mix($color_grey_600, $color_primary_500, 60%)
+    &:active
+      color: black
+      transition: none
+      @media (min-width: $breakpoint_2)
+        color: $color_grey_700
