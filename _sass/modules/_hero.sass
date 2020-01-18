@@ -10,18 +10,11 @@
   z-index: 1
   @media (min-width: $breakpoint_2)
     padding-bottom: 250px
-    padding-top: 230px
+    padding-top: 200px
 
   h1, p
     @media (min-width: $breakpoint_2)
       text-align: center
-      .-sidebyside &
-        text-align: left
-    .-sidebyside &
-      max-width: 700px
-      text-align: left
-
-  h1
 
   p
     color: mix($color_grey_700, $color_primary_500, 80%)
@@ -29,41 +22,16 @@
       margin-left: auto
       margin-right: auto
       max-width: 800px
-      .-sidebyside &
-        margin-left: 0
-        margin-right: 0
 
 .heroImage
   margin-top: 100px
   img
     display: block
     height: auto
-    width: 100%
-  .-sidebyside &
-    margin-top: 0
-    z-index: 0
-
-    &, & img
-      bottom: 0
-      height: 100%
-      left: 0
-      position: absolute
-      width: 100%
+    max-width: 100%
 
     img
-      display: none
       object-fit: cover
-      @media (min-width: $breakpoint_2)
-        display: block
-
-    &::after
-      background-image: linear-gradient(to bottom, rgba($color_grey_50, 0), rgba($color_grey_50, 1))
-      bottom: 0
-      content: ''
-      height: 100px
-      left: 0
-      position: absolute
-      width: 100%
 
 .heroQuote
   +containerContent
@@ -76,6 +44,49 @@
     margin: 0 auto
     @media (min-width: $breakpoint_2)
       padding-right: 50px
+
+#heroIndex
+  .heroContent
+    @media (min-width: $breakpoint_2)
+      padding-bottom: 120px
+    h1
+      @media (min-width: $breakpoint_2)
+        text-align: center
+  .heroContentTeaser
+    align-items: center
+    display: flex
+    margin: 20px auto 0
+    max-width: 900px
+    padding-bottom: 50px
+    padding-left: 20px
+    position: relative
+    @media (min-width: $breakpoint_2)
+      margin-top: 40px
+    &::after
+      @media (min-width: $breakpoint_2)
+        background: $color_grey_300
+        bottom: 0
+        content: ''
+        height: 1px
+        left: 50%
+        margin: 0 auto
+        position: absolute
+        transform: translateX(-50%)
+        width: 200px
+    img
+      border-radius: 20px
+      box-shadow: 0 0 10px rgba(black, 0.1)
+      height: 120px
+      width: 120px
+      @media (min-width: $breakpoint_2)
+        border-radius: 50%
+        height: 110px
+        width: 110px
+    p
+      padding-left: 20px
+      text-align: left
+      @media (min-width: $breakpoint_2)
+        padding-left: 30px
 
 #heroWork, #heroOffering
   .heroContent
@@ -93,6 +104,9 @@
       width: 100%
 
 #heroWork
+  .heroContent
+    @media (min-width: $breakpoint_2)
+      max-width: 900px
   .heroImage
     margin-top: 0
 
