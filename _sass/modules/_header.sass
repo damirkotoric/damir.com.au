@@ -31,14 +31,13 @@ $menuItems: 6
 
   > div
     +containerPage
-    margin-top: 10px
     @media (min-width: $breakpoint_2)
       align-items: center
       display: flex
       justify-content: space-between
-      padding: 10px 20px
+      padding: 0 20px
     @media (min-width: $breakpoint_3)
-      padding: 10px 50px
+      padding: 0 40px
 
   .-menu-opened &
     background: mix($color_primary_50, white, 20%)
@@ -54,29 +53,58 @@ $menuItems: 6
       z-index: 0
 
 .headerLogo
-  align-items: center
-  display: flex
-  float: left
-  height: 50px
-  justify-content: flex-start
+  height: 80px
   margin-left: 15px
-  opacity: 1
-  transition: opacity 0.3s
-  transition-delay: 0.3s
-  width: 50px
-  @media (min-width: $breakpoint_2)
-    height: auto
-    width: auto
-  svg
-    height: 24px
-    width: auto
-    @media (min-width: $breakpoint_2)
-      height: 40px
+  position: relative
+  user-select: none
+  width: 80px
   .-menu-opened &
     opacity: 0
     pointer-events: none
     transition-delay: 0s
     z-index: -1
+  &:hover
+    .headerLogoBox
+      &:nth-child(2)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(6px)
+      &:nth-child(3)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(12px)
+  &:active
+    .headerLogoBox
+      &:nth-child(2)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(2px)
+      &:nth-child(3)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(4px)
+
+.headerLogoBox
+  background: $color_primary_500
+  border-radius: 6px
+  height: 50px
+  left: 50%
+  margin-top: 8px
+  position: absolute
+  width: 50px
+  top: 50%
+  transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg)
+  transition: transform 0.3s
+  &:nth-child(1)
+    opacity: 0.4
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(0)
+    z-index: 1
+  &:nth-child(2)
+    opacity: 0.7
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(10px)
+    z-index: 2
+  &:nth-child(3)
+    align-items: center
+    color: $color_primary_100
+    display: flex
+    font-size: 30px
+    font-weight: 900
+    justify-content: center
+    line-height: 1
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(20px)
+    z-index: 3
 
 .headerBurger
   -webkit-tap-highlight-color: transparent
@@ -152,18 +180,6 @@ $menuItems: 6
     padding: 0
     transform: scale(1) translateY(0)
   &.-active
-    &::before
-      background: $color_primary_500
-      bottom: 0
-      content: ''
-      height: 100%
-      left: 0
-      position: absolute
-      width: 3px
-      @media (min-width: $breakpoint_2)
-        height: 3px
-        margin: 0 15px
-        width: calc(100% - 30px)
     a
       color: $color_primary_500
 
@@ -181,7 +197,7 @@ $menuItems: 6
   a
     display: block
     position: relative
-    color: $color_grey_700
+    color: $color_grey_500
     text-decoration: none
     font-size: 22px
     letter-spacing: 0.03em
@@ -190,12 +206,11 @@ $menuItems: 6
     width: 100%
     @media (min-width: $breakpoint_2)
       align-items: center
-      color: mix($color_grey_500, $color_primary_500, 60%)
       display: flex
       font-size: 17px
       letter-spacing: 0.05em
       padding: 0 4px
-      height: 80px
+      height: 100px
       padding: 0 20px
     &:hover
       color: $color_grey_800

@@ -11,111 +11,68 @@
   @media (min-width: $breakpoint_2)
     padding-bottom: 250px
     padding-top: 200px
-
-  h1, p
-    @media (min-width: $breakpoint_2)
-      text-align: center
-
-  p
-    color: mix($color_grey_700, $color_primary_500, 80%)
-    @media (min-width: $breakpoint_2)
-      margin-left: auto
-      margin-right: auto
-      max-width: 800px
-
-.heroImage
-  margin-top: 100px
-  img
-    display: block
-    height: auto
-    max-width: 100%
-
-    img
-      object-fit: cover
-
-.heroQuote
-  +containerContent
-  margin-bottom: 100px
-  margin-top: 50px
-  @media (min-width: $breakpoint_2)
-    margin-bottom: 150px
-    margin-top: 100px
-  > blockquote
-    margin: 0 auto
-    @media (min-width: $breakpoint_2)
-      padding-right: 50px
-
-#heroIndex
-  .heroContent
-    @media (min-width: $breakpoint_2)
-      padding-bottom: 120px
-    h1
-      @media (min-width: $breakpoint_2)
-        text-align: center
-  .heroContentTeaser
-    align-items: center
-    display: flex
-    margin: 20px auto 0
-    max-width: 900px
-    padding-bottom: 50px
-    position: relative
-    @media (min-width: $breakpoint_2)
-      margin-top: 40px
-      padding-left: 20px
-    &::after
-      @media (min-width: $breakpoint_2)
-        background: $color_grey_300
-        bottom: 0
-        content: ''
-        height: 1px
-        left: 50%
-        margin: 0 auto
-        position: absolute
-        transform: translateX(-50%)
-        width: 200px
-    img
-      border-radius: 20px
-      box-shadow: 0 0 10px rgba(black, 0.1)
-      height: 120px
-      width: 120px
-      @media (min-width: $breakpoint_2)
-        border-radius: 50%
-        height: 110px
-        width: 110px
-    p
-      padding-left: 20px
-      text-align: left
-      @media (min-width: $breakpoint_2)
-        padding-left: 30px
-
-#heroWork, #heroOffering
-  .heroContent
-    padding-bottom: 0
-    @media (min-width: $breakpoint_2)
-      padding-bottom: 0
-  .heroImage
-    +containerPage
-    padding: 0 30px
-    position: relative
-    @media (min-width: $breakpoint_2)
-      padding: 0 80px
-    img
-      display: block
-      width: 100%
-
-#heroWork
-  .heroContent
-    @media (min-width: $breakpoint_2)
-      max-width: 900px
-  .heroImage
-    margin-top: 0
-
-#heroOffering
-  .heroImage
-    max-width: 960px
-    @media (max-width: $breakpoint_2)
-      margin-top: 50px
-
-#heroContact
   h1
     margin-bottom: 40px
+  p
+    color: $color_grey_700
+    max-width: 800px
+  strong
+    color: $color_grey_800
+  video
+    box-shadow: 0 0 4px rgba(black, 0.2)
+    height: auto
+    max-width: 800px
+
+// .heroImage
+//   margin-top: 100px
+//   img
+//     display: block
+//     height: auto
+//     max-width: 100%
+
+//     img
+//       object-fit: cover
+
+// .heroQuote
+//   +containerContent
+//   margin-bottom: 100px
+//   margin-top: 50px
+//   @media (min-width: $breakpoint_2)
+//     margin-bottom: 150px
+//     margin-top: 100px
+//   > blockquote
+//     margin: 0 auto
+//     @media (min-width: $breakpoint_2)
+//       padding-right: 50px
+
+// #heroWork, #heroOffering
+//   .heroContent
+//     padding-bottom: 0
+//     @media (min-width: $breakpoint_2)
+//       padding-bottom: 0
+//   .heroImage
+//     +containerPage
+//     padding: 0 30px
+//     position: relative
+//     @media (min-width: $breakpoint_2)
+//       padding: 0 80px
+//     img
+//       display: block
+//       width: 100%
+
+// #heroWork
+//   .heroContent
+//     @media (min-width: $breakpoint_2)
+//       max-width: 900px
+//   .heroImage
+//     margin-top: 0
+
+// #heroOffering
+//   .heroImage
+//     max-width: 960px
+//     @media (max-width: $breakpoint_2)
+//       margin-top: 50px
+
+// #heroContact
+//   h1
+//     margin-bottom: 40px

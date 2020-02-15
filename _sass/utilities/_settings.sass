@@ -1,14 +1,14 @@
 // Colours
-$color_primary_50: #ECEFF4
-$color_primary_100: #CCD4E2
-$color_primary_200: #ABB7CF
-$color_primary_300: #8B9BBD
-$color_primary_400: #6A7FAA
-$color_primary_500: #496397
-$color_primary_600: #3A4F79
-$color_primary_700: #2C3B5B
-$color_primary_800: #1D283C
-$color_primary_900: #0F141E
+$color_primary_500: #A08626
+$color_primary_50: lighten($color_primary_500, 90%)
+$color_primary_100: lighten($color_primary_500, 72%)
+$color_primary_200: lighten($color_primary_500, 54%)
+$color_primary_300: lighten($color_primary_500, 36%)
+$color_primary_400: lighten($color_primary_500, 18%)
+$color_primary_600: darken($color_primary_500, 20%)
+$color_primary_700: darken($color_primary_500, 40%)
+$color_primary_800: darken($color_primary_500, 60%)
+$color_primary_900: darken($color_primary_500, 80%)
 
 $color_accent_50: #FFFCE5
 $color_accent_100: #FEF7B8
@@ -69,19 +69,19 @@ $breakpoint_4: 1600px
 
 @mixin h1
   color: $color_primary_900
-  font-family: source-serif-pro, Georgia, serif
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif
   font-weight: 900
   font-style: normal
   font-size: 44px
-  line-height: 1
-  letter-spacing: -1px
+  line-height: 0.92
+  letter-spacing: -2px
   word-spacing: 3px
   @media (min-width: $breakpoint_2)
-    font-size: 90px
+    font-size: 100px
 
 @mixin h2
   color: $color_primary_900
-  font-family: source-serif-pro, Georgia, serif
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif
   font-weight: 600
   font-size: 32px
   line-height: 1.1
@@ -129,9 +129,10 @@ $breakpoint_4: 1600px
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   line-height: 1.5
   font-size: 18px
-  font-weight: 600
+  font-weight: 500
   @media (min-width: $breakpoint_2)
     font-size: 24px
+    letter-spacing: -0.6px
 
 @mixin body2
   color: $color_primary_900

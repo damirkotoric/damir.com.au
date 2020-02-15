@@ -43,11 +43,11 @@
   <body class="page--{{ page.path | replace: ".html", "" }}">
     <div class="header">
       <div>
-        <div class="headerLogo">
-          <a href="/" aria-label="Home">
-            {% include logo.ext %}
-          </a>
-        </div>
+        <a class="headerLogo" href="/" aria-label="Home">
+          <div class="headerLogoBox"></div>
+          <div class="headerLogoBox"></div>
+          <div class="headerLogoBox"><span>D</span></div>
+        </a>
         <div class="headerBurger">
           <div class="headerBurgerContainer">
             <div class="headerBurgerContainerBar -topBar"></div>
@@ -56,8 +56,8 @@
         </div>
         <div class="headerMenu">
           <div class="headerMenuItem {% if page.activeNav == 1 %}-active{% endif %}"><a href="/">Overview</a></div>
-          <div class="headerMenuItem {% if page.activeNav == 2 %}-active{% endif %}"><a href="/work">Work</a></div>
-          <!-- <div class="headerMenuItem {% if page.activeNav == 3 %}-active{% endif %}"><a href="/offering">Offering</a></div> -->
+          <div class="headerMenuItem {% if page.activeNav == 2 %}-active{% endif %}"><a href="/portfolio">Portfolio</a></div>
+          <div class="headerMenuItem {% if page.activeNav == 3 %}-active{% endif %}"><a href="/services">Specialties</a></div>
           <div class="headerMenuItem {% if page.activeNav == 4 %}-active{% endif %}"><a href="/contact">Contact</a></div>
         </div>
       </div>
