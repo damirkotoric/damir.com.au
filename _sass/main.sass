@@ -23,8 +23,10 @@
   -moz-box-sizing: border-box
   box-sizing: border-box
 
+html, body
+  background-color: $color_secondary_50
+
 html
-  background-color: $color_grey_50
   +body1
 
   // @media screen and (prefers-color-scheme: dark)
@@ -33,7 +35,6 @@ html
   //     color: $color_grey_50
 
 body
-  background: $color_grey_50
   &.-menu-opened
     overflow: hidden
 
@@ -61,6 +62,15 @@ p
   @media (min-width: $breakpoint_2)
     margin: 30px 0
 
+  a
+    color: $color_grey_700
+    transition: color 0.4s
+    &:hover
+      color: $color_primary_500
+    &:active
+      color: $color_primary_700
+      transition: none
+
 small
   display: block
   font-size: 0.7rem
@@ -78,10 +88,6 @@ aside
   > small
     border-top: 1px solid rgba(black, 0.3)
     padding-top: 1rem
-
-a
-  color: $color_primary_500
-  text-decoration: none
 
 abbr
   border-bottom: 1px dotted rgba(black, 0.3)
