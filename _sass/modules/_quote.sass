@@ -1,36 +1,12 @@
 .quote
   +body2
-  color: $color_grey_600
   line-height: 1.3
   margin-top: 25px
   padding-top: 37px
   position: relative
-  &::before
-    background-image: url(/assets/images/icon_quote.svg)
-    background-position: 50% 0%
-    background-repeat: no-repeat
-    background-size: 36px
-    content: ''
-    display: block
-    height: 40px
-    left: 0
-    opacity: 0.7
-    position: absolute
-    top: 0
-    width: 36px
   @media (min-width: $breakpoint_1)
     margin-top: 40px
     padding-top: 45px
-  a
-    border-bottom: 2px solid $color_grey_200
-    color: $color_grey_600
-    transition: all 0.2s
-    &:hover
-      border-color: $color_grey_400
-    &:active
-      border-color: $color_grey_600
-      color: black
-      transition: none
 
   &.-large
     padding-top: 45px
@@ -38,42 +14,50 @@
     @media (min-width: $breakpoint_2)
       padding-left: 120px
       padding-top: 15px
-    &::before
-      background-image: url(/assets/images/icon_quote.svg)
-      background-size: 40px
-      height: 40px
-      margin-left: -5px
-      opacity: 1
-      width: 50px
-      @media (min-width: $breakpoint_2)
-        background-size: 70px
-        height: 70px
-        margin-left: 0
-        width: 80px
     div
-      color: $color_primary_600
       font-size: 24px
       @media (min-width: $breakpoint_2)
         font-size: 30px
 
-.quoteText
-  color: mix($color_grey_700, $color_primary_500, 70%)
+.quoteIcon
   display: block
-  font-family: source-serif-pro, serif
-  font-size: 20px
-  margin-bottom: 10px
+  left: 0
+  opacity: 0.7
+  position: absolute
+  top: 0
+  width: 36px
+  height: 40px
+  margin-left: -5px
+  opacity: 1
   @media (min-width: $breakpoint_2)
-    font-size: 26px
+    height: 70px
+    margin-left: 0
+    width: 80px
+
+  svg > path
+    fill: $color_secondary_400
+    @media (prefers-color-scheme: dark)
+      // fill: $color_secondary_700
+
+.quoteText
+  +h4
+  color: $color_grey_600
+  display: block
+  margin-top: 10px
 
 .quoteAuthor
   align-items: center
   display: flex
   margin-top: 20px
   @media (min-width: $breakpoint_2)
-    margin-top: 40px
+    margin-top: 30px
+
+.quoteAuthorImage
+  display: block
   img
-    border: 3px solid $color_primary_600
+    border: 4px solid $color_primary_600
     border-radius: 50%
+    display: block
     height: 70px
     margin-right: 20px
     width: 70px
@@ -81,12 +65,23 @@
       height: 100px
       margin-right: 25px
       width: 100px
+
+.quoteAuthorContent
   a
     +body2
     border-bottom: none
     color: $color_primary_600
     display: block
+    font-weight: 700
     margin-bottom: 5px
+    text-decoration: none
+    transition: all 0.2s
+    &:hover
+      border-color: $color_grey_400
+    &:active
+      border-color: $color_grey_600
+      color: black
+      transition: none
   span
     +caption
     color: $color_grey_600

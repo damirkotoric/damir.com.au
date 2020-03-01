@@ -13,10 +13,13 @@
 @import "modules/highlight"
 @import "modules/map"
 @import "modules/offering"
+@import "modules/organisations"
 @import "modules/portfolio"
 @import "modules/quote"
+@import "modules/quoteSection"
 @import "modules/rate"
 @import "modules/rates"
+@import "modules/showcase"
 @import "modules/social"
 
 *, *:before, *:after
@@ -29,7 +32,7 @@ html, body
 html
   +body1
 
-  // @media screen and (prefers-color-scheme: dark)
+  // @media (prefers-color-scheme: dark)
   //   &
   //     background-color: $color_grey_900
   //     color: $color_grey_50
@@ -140,3 +143,7 @@ hr
   height: 2px
   margin: 50px auto
   width: 100px
+
+img
+  height: auto
+  max-width: 100%
