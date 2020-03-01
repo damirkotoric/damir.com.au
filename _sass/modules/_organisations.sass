@@ -1,12 +1,18 @@
 .organisations
   background: $color_secondary_100
   margin: 0 20px 20px
+  text-align: center
   > div
     +containerPage
     padding: 100px 130px
 
+  p
+    +h6
+    color: $color_grey_500
+
 .organisationsTitle
   +overline
+  margin-bottom: 30px
 
 .organisationsLogos
   align-items: center
@@ -14,19 +20,14 @@
   flex-wrap: wrap
 
 .organisationsLogosLogo
-  align-items: center
-  display: flex
-  margin-right: 60px
-  margin-top: 50px
+  padding: 20px 30px
+  text-align: center
+  width: 20%
   
   img
-    display: block
-    max-height: 50px
+    max-height: 80px
+    max-width: 100%
     width: auto
-  
-  &.-large
-    img
-      max-height: 75px
 
 #organisationsLogosLogoBooking
   img
