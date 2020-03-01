@@ -1,13 +1,18 @@
 .showcase
-  background: $color_secondary_100
-  margin: 0 20px 20px
+  background-color: $color_secondary_100
+  @media (min-width: $breakpoint_2)
+    margin: 0 20px 20px
   > div
     +containerPage
-    padding: 100px 130px
+    padding: 40px 20px
+    @media (min-width: $breakpoint_2)
+      padding: 100px 130px
 
 .showcaseTitle
   +overline
-  margin-bottom: 50px
+  margin-bottom: 20px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 50px
 
 .showcaseCards
   display: flex
@@ -15,56 +20,65 @@
 
 .showcaseCardsCard
   flex: 1 0 auto
-  height: 380px
+  height: 200px
   margin-bottom: 20px
   overflow: hidden
+  width: 100%
+  @media (min-width: $breakpoint_2)
+    height: 380px
   // Row 1
   &:nth-child(1)
-    width: 40%
     @media (min-width: $breakpoint_2)
       padding-right: 20px
+      width: 40%
   &:nth-child(2)
-    width: 60%
+    @media (min-width: $breakpoint_2)
+      width: 60%
   // Row 2
   &:nth-child(3)
-    height: 320px
-    width: 60%
     @media (min-width: $breakpoint_2)
+      height: 320px
       padding-right: 20px
+      width: 60%
   &:nth-child(4)
-    height: 320px
-    width: 40%
+    @media (min-width: $breakpoint_2)
+      height: 320px
+      width: 40%
   // Row 3
   &:nth-child(5)
-    height: 560px
-    width: 50%
     @media (min-width: $breakpoint_2)
+      height: 560px
       padding-right: 20px
+      width: 50%
   &:nth-child(6)
-    height: 560px
-    width: 50%
+    @media (min-width: $breakpoint_2)
+      height: 560px
+      width: 50%
   // Row 4
   &:nth-child(7)
-    height: 320px
-    width: 60%
     @media (min-width: $breakpoint_2)
+      height: 320px
       padding-right: 20px
+      width: 60%
   &:nth-child(8)
-    height: 320px
-    width: 40%
+    @media (min-width: $breakpoint_2)
+      height: 320px
+      width: 40%
   // Row 5
   &:nth-child(9)
-    height: 400px
-    width: 100%
+    @media (min-width: $breakpoint_2)
+      height: 400px
+      width: 100%
   // Row 6
   &:nth-child(10)
-    height: 320px
-    width: 40%
     @media (min-width: $breakpoint_2)
+      height: 320px
       padding-right: 20px
+      width: 40%
   &:nth-child(11)
-    height: 320px
-    width: 60%
+    @media (min-width: $breakpoint_2)
+      height: 320px
+      width: 60%
   img
     border: 1px solid $color_secondary_200
     border-radius: 4px
@@ -73,8 +87,9 @@
     width: 100%
 
 .showcaseMore
-  padding-top: 40px
   text-align: center
+  @media (min-width: $breakpoint_2)
+    padding-top: 40px
   a
     color: $color_primary_500
     font-weight: 600

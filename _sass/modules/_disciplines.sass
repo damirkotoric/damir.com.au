@@ -1,12 +1,16 @@
 .disciplines
-  align-items: stretch
   background: $color_secondary_100
-  display: flex
-  margin: 0 20px 20px
+  margin: 5px 0 0
+  @media (min-width: $breakpoint_2)
+    align-items: stretch
+    display: flex
+    margin: 0 20px 20px
 
 .disciplinesImage
-  padding: 20px 0 20px 20px
+  padding: 20px 20px 0
   width: 100%
+  @media (min-width: $breakpoint_2)
+    padding: 20px 0 20px 20px
   img
     height: 100%
     max-width: none
@@ -16,7 +20,9 @@
 .disciplinesContent
   +containerPage
   max-width: 1000px
-  padding: 100px
+  padding: 20px
+  @media (min-width: $breakpoint_2)
+    padding: 100px
   
   p
     +h6

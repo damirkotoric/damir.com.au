@@ -1,8 +1,12 @@
 .prompt
-  margin: 0 20px 20px
+  margin: 20px 0 100px
+  @media (min-width: $breakpoint_2)
+    margin: 0 20px 100px
   > div
     +containerPage
-    padding: 100px 130px 200px
+    padding: 20px
+    @media (min-width: $breakpoint_2)
+      padding: 100px 130px
 
   h6, p, strong
     +h4
