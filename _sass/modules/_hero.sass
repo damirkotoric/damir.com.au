@@ -1,4 +1,5 @@
 .hero
+  overflow: hidden
   position: relative
 
 .heroImage
@@ -6,6 +7,7 @@
   display: block
   z-index: 0
   @media (min-width: $breakpoint_2)
+    bottom: 20px
     left: 20px
     position: absolute
     right: 20px
@@ -21,7 +23,7 @@
       max-width: 100%
   &::after
     background: $color_secondary_200
-    background: linear-gradient(15deg, rgba($color_secondary_200, 1) 0%, rgba($color_secondary_200, 0) 65%, rgba($color_secondary_200, 0) 65%, rgba($color_secondary_200, 1) 100%)
+    background: linear-gradient(15deg, rgba($color_secondary_200, 0) 85%, rgba($color_secondary_200, 1) 100%)
     content: ''
     display: block
     height: 100%
@@ -30,6 +32,8 @@
     top: 0
     width: 100%
     z-index: 0
+    @media (min-width: $breakpoint_2)
+      background: linear-gradient(15deg, rgba($color_secondary_200, 1) 0%, rgba($color_secondary_200, 0) 65%, rgba($color_secondary_200, 0) 65%, rgba($color_secondary_200, 1) 100%)
 
 .heroContent
   +containerPage
@@ -40,20 +44,24 @@
     padding: 55vh 150px 100px
   h1
     color: $color_grey_900
-    font-size: 60px
+    font-size: 50px
     margin-bottom: 20px
     @media (min-width: $breakpoint_2)
-      font-size: 130px
+      font-size: 120px
       margin-bottom: 40px
   h4
-    color: $color_grey_600
+    color: $color_grey_500
     margin-bottom: 40px
     max-width: 900px
+    @media (min-width: $breakpoint_2)
+      color: $color_grey_600
   strong
     color: $color_grey_800
+    display: block
     font-weight: inherit
+    margin: 10px 0
     @media (min-width: $breakpoint_2)
-      display: block
+      margin: 0
   a
     color: $color_grey_700
   video
