@@ -1,11 +1,10 @@
 .organisations
   background: $color_secondary_100
-  // text-align: center
   @media (min-width: $breakpoint_2)
     margin: 0 20px 20px
   > div
     +containerPage
-    padding: 20px
+    padding: 40px 20px 20px
     @media (min-width: $breakpoint_2)
       padding: 100px 130px
 
@@ -15,7 +14,9 @@
 
 .organisationsTitle
   +overline
-  margin-bottom: 30px
+  margin-bottom: 10px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 30px
 
 .organisationsLogos
   align-items: center
@@ -32,9 +33,8 @@
   @media (min-width: $breakpoint_2)
     padding: 20px 100px 20px 0
     
-  
   img
-    max-height: 30px
+    max-height: 50px
     max-width: 100%
     width: auto
     @media (min-width: $breakpoint_1)
@@ -55,5 +55,6 @@
 
 #organisationsLogosLogoEnvato
   img
+    max-height: 30px
     @media (min-width: $breakpoint_2)
       max-height: 35px
