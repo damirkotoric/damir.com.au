@@ -24,17 +24,21 @@
   justify-content: center
 
 .organisationsLogosLogo
-  padding: 20px
-  // text-align: center
+  padding: 20px 40px 20px 0
   width: 50%
+  @media (min-width: $breakpoint_1)
+    padding: 20px 80px 20px 0
+    width: 25%
   @media (min-width: $breakpoint_2)
     padding: 20px 100px 20px 0
-    width: 25%
+    
   
   img
-    max-height: 50px
+    max-height: 30px
     max-width: 100%
     width: auto
+    @media (min-width: $breakpoint_1)
+      max-height: 70px
     @media (min-width: $breakpoint_2)
       max-height: 90px
 
