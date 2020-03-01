@@ -1,244 +1,26 @@
 .portfolio
-  +containerPage
-  position: relative
-  z-index: 10
+  @media (min-width: $breakpoint_2)
+    margin: 0 20px 20px
+  > div
+    +containerPage
+    background-color: $color_secondary_100
+    padding: 40px 20px
+    @media (min-width: $breakpoint_2)
+      padding: 50px 130px
 
 .portfolioItem
-  background: linear-gradient(170deg, $color_grey_100, $color_primary_100)
-  border-bottom: 1px solid $color_grey_50
-  overflow: hidden
-  padding: 100px 20px 0
-  position: relative
-  text-align: left
-  @media (min-width: $breakpoint_2)
-    border-bottom: none
-    margin: 0 30px 30px
-    padding: 150px 150px 0
-    text-align: center
-  &:first-child
-    border-top: 1px solid rgba($color_grey_200, 0.5)
-    overflow: visible
-    padding-top: 50px
-    @media (min-width: $breakpoint_2)
-      padding-top: 100px
-    &::before
-      box-shadow: 0 -1px 50px rgba(mix($color_primary_300, black, 50%), 1), 0 -1px 10px rgba(black, 0.3)
-      content: ''
-      height: 4px
-      left: 1%
-      position: absolute
-      top: 0
-      width: 98%
-      z-index: -1
-  &.-dark
-    background-color: $color_grey_900
-    background-image: linear-gradient(170deg, $color_grey_900, $color_primary_900)
-    a:not(.button)
-      color: $color_primary_300
-  &.-withBG
-    background-repeat: repeat
-    background-size: cover
-    img
-      object-fit: cover
-      width: 100%
-  a:not(.button)
-    color: $color_primary_500
-
-  &#Giza
-    background-image: url(/assets/images/giza_background.jpg)
-    .portfolioItemImage
-      img
-        max-height: 80vh
-
-  &#EnvatoLayers
-    background-image: url(/assets/images/envato_layers_bg.jpg)
-
-  &#Booking, &#Storyverse, &#Falconfilms, &#HUL, &#HYAP, &#Blenheim, &#GizaVR, &#Rosicrucian
-    padding-left: 20px
-    padding-right: 20px
-    @media (min-width: $breakpoint_2)
-      padding-left: 60px
-      padding-right: 60px
-    .portfolioItemImage
-      background: none
-      border-radius: 0
-      box-shadow: none
-      img
-        border-radius: 0
-        height: auto
-        max-width: none
-        object-fit: contain
-        object-fit: cover
-        width: 100%
-        @media (min-width: $breakpoint_2)
-          border-radius: 0
-
-  &#Booking
-    .portfolioItemImage
-      img
-        max-height: 80vh
-
-  &#Storyverse
-    background-image: url(/assets/images/storyverse_bg.jpg)
-    @media (min-width: $breakpoint_2)
-      padding-left: 120px
-      padding-right: 120px
-
-  &#Minihero
-    background-image: url(/assets/images/minihero_bg.jpg)
-    padding-bottom: 50px
-    padding-top: 200px
-    @media (min-width: $breakpoint_2)
-      padding-bottom: 500px
-
-  &#Twipsum
-    background-image: url(/assets/images/twipsum_bg.jpg)
-
-  &#Falconfilms
-    .portfolioItemImage
-      margin-top: 0
-      img
-        margin-bottom: 50px
-        margin-left: auto
-        margin-right: auto
-        max-width: 1000px
-        @media (min-width: $breakpoint_2)
-          margin-bottom: 100px
-
-  &#HUL
-    background-image: url(/assets/images/hul_bg.jpg)
-    @media (min-width: $breakpoint_2)
-      padding-left: 250px
-      padding-right: 250px
-    .portfolioItemImage
-      padding-left: 50px
-      padding-right: 50px
-      @media (min-width: $breakpoint_2)
-        padding-left: 0
-        padding-right: 0
-
-  &#Peabody
-    .portfolioItemImage
-      img
-        max-height: 90vh
-        object-fit: cover
-
-  &#Zhejiang
-    background-image: url(/assets/images/zhejiang_bg.jpg)
-    padding-bottom: 300px
-    .portfolioItemContentHeading
-      max-width: 900px
-    @media (min-width: $breakpoint_2)
-      padding-bottom: 700px
-
-  &#HYAP
-    background: white
-    @media (min-width: $breakpoint_2)
-      padding-left: 0
-      padding-right: 0
-    .portfolioItemImage
-      @media (max-width: $breakpoint_2)
-        margin-left: -20px
-        margin-right: -20px
-        padding: 0
-
-  &#Blenheim
-    background-image: url(/assets/images/blenheim_bg.jpg)
-    .portfolioItemImage
-      img
-        margin: 0 auto
-        max-width: 200px
-        @media (min-width: $breakpoint_2)
-          max-width: 400px
-
-  &#Sardis
-    background-image: url(/assets/images/sardis_bg.jpg)
-    .portfolioItemImage
-      background: linear-gradient(180deg, white 0%, $color_grey_50 100%)
-      margin-left: auto
-      margin-right: auto
-      max-width: 180px
-      @media (min-width: $breakpoint_2)
-        max-width: 360px
-
-  &#GizaVR
-    @media (min-width: $breakpoint_2)
-      padding-left: 0
-      padding-right: 0
-    .portfolioItemImage
-      padding-bottom: 30px
-      @media (max-width: $breakpoint_2)
-        margin-left: -20px
-        margin-right: -20px
-        padding-left: 0
-        padding-right: 0
-
-  &#ARCE
-    .portfolioItemContentHeading
-      max-width: none
-
-  &#Sinai
-
-  &#Steleforest
-    background-image: url(/assets/images/steleforest_bg.jpg)
-    .portfolioItemImage
-      margin-left: auto
-      margin-right: auto
-      max-width: 200px
-      @media (min-width: $breakpoint_2)
-        max-width: 360px
-    .portfolioItemImage
-      background: linear-gradient(180deg, white 0%, $color_grey_50 100%)
-
-  &#Rosicrucian
-    background-image: url(/assets/images/rosicrucian_bg.jpg)
-    .portfolioItemImage
-      @media (max-width: $breakpoint_2)
-        margin-left: auto
-        margin-right: auto
-        max-width: 260px
-      img
-        margin: 0 auto
-        max-width: 400px
-
-.portfolioItemContentOverline
-  +overline
-  margin-bottom: 20px
-
-.portfolioItemContentHeading
-  margin-left: auto
-  margin-right: auto
-  max-width: 770px
-  .-dark &
-    color: $color_grey_50
-
-.portfolioItemContentSubheading
-  color: $color_grey_700
-  margin-left: auto
-  margin-right: auto
-  max-width: 770px
-  .-dark &
-    color: $color_grey_200
-
-.portfolioItemImage
-  background: linear-gradient(180deg, white 0%, $color_grey_50 100%)
-  border-radius: 20px 20px 0 0
-  box-shadow: 0 0 20px rgba(black, 0.2)
-  margin-top: 50px
-  padding: 6px 6px 0
-  @media (min-width: $breakpoint_2)
-    margin-top: 80px
-    padding: 10px 10px 0
-  .-dark &
-    background: linear-gradient(180deg, $color_grey_800 0%, $color_grey_900 100%)
+  display: block
+  text-decoration: none
+  width: 50%
+  &:hover
+    h2
+      text-decoration: underline
   img
-    border-radius: 14px 14px 0 0
-    display: block
-    height: auto
-    max-width: 100%
-    width: 100%
-    @media (min-width: $breakpoint_2)
-      border-radius: 12px 12px 0 0
-
-.portfolioItemContentButton
-  margin-top: 15px
+    border-radius: 4px
+  h2
+    +h4
+    color: $color_primary_500
+    margin-top: 20px
+  p
+    +h6
+    margin-top: 10px
