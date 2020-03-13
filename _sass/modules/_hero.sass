@@ -59,14 +59,14 @@
     h1
       line-height: 0.92
     p
-      +h4
+      +h5
       color: $color_grey_500
-      margin-bottom: 16px
-      max-width: 17em
+      margin-bottom: 20px
       @media (prefers-color-scheme: dark)
         color: $color_grey_400
       @media (min-width: $breakpoint_1)
         margin-bottom: 30px
+        max-width: 22em
   .heroImage
     display: block
     height: 300px
@@ -77,10 +77,10 @@
       height: 400px
       width: 400px
     @media (min-width: $breakpoint_2)
-      height: 540px
-      width: 540px
+      height: 500px
+      width: 480px
     @media (min-width: $breakpoint_4)
-      width: 700px
+      width: 600px
     &::before
       background: linear-gradient(-60deg, $color_primary_700, $color_secondary_200)
       border-radius: 6px
