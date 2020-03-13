@@ -1,7 +1,7 @@
 // Colours
 $color_primary_500: #3510b8
-$color_primary_50: lighten($color_primary_500, 62%)
-$color_primary_100: lighten($color_primary_500, 54%)
+$color_primary_50: lighten($color_primary_500, 58%)
+$color_primary_100: lighten($color_primary_500, 50%)
 $color_primary_200: lighten($color_primary_500, 40%)
 $color_primary_300: lighten($color_primary_500, 26%)
 $color_primary_400: lighten($color_primary_500, 10%)
@@ -151,6 +151,8 @@ $breakpoint_4: 1600px
   letter-spacing: 0.8px
   text-transform: uppercase
   word-spacing: 1px
+  @media (prefers-color-scheme: dark)
+    color: $color_grey_50
   @media (min-width: $breakpoint_3)
     font-size: 20px
     letter-spacing: 0.5px

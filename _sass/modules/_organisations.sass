@@ -5,12 +5,16 @@
     margin-bottom: 20px
     padding-bottom: 20px
     padding-top: 40px
+    @media (prefers-color-scheme: dark)
+      background-color: $color_grey_700
     @media (min-width: $breakpoint_2)
       padding: 80px 100px
 
   p
     +body2
     color: $color_grey_500
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_300
 
 .organisationsTitle
   +overline
@@ -41,6 +45,16 @@
       max-height: 70px
     @media (min-width: $breakpoint_2)
       max-height: 90px
+
+.organisationsLogosLogoDark
+  display: block
+  @media (prefers-color-scheme: dark)
+    display: none
+
+.organisationsLogosLogoLight
+  display: none
+  @media (prefers-color-scheme: dark)
+    display: block
 
 #organisationsLogosLogoBooking
   img

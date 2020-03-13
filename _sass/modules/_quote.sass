@@ -35,13 +35,15 @@
     & > path
       fill: $color_secondary_500
       @media (prefers-color-scheme: dark)
-        // fill: $color_secondary_700
+        fill: $color_grey_600
 
 .quoteText
   +h4
   color: $color_grey_600
   display: block
   margin-top: 10px
+  @media (prefers-color-scheme: dark)
+    color: $color_grey_200
 
 .quoteAuthor
   align-items: center
@@ -62,6 +64,8 @@
     height: 70px
     max-width: none
     width: 70px
+    @media (prefers-color-scheme: dark)
+      border-color: $color_primary_200
     @media (min-width: $breakpoint_2)
       height: 100px
       width: 100px
@@ -76,6 +80,8 @@
     margin-bottom: 5px
     text-decoration: none
     transition: all 0.2s
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_200
     &:hover
       border-color: $color_grey_400
     &:active
@@ -87,3 +93,5 @@
     color: $color_grey_600
     display: block
     line-height: 1.3
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_400

@@ -5,6 +5,8 @@
   &:hover
     h3
       color: $color_grey_800
+      @media (prefers-color-scheme: dark)
+        color: white
     .cardImage
       img
         transform: scale(1.02)
@@ -14,10 +16,14 @@
     +h4
     color: $color_grey_700
     margin-bottom: 10px
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_50
   p
     +body2
     color: $color_grey_500
     margin: 0
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_300
   
 
 .cardImage
@@ -29,6 +35,8 @@
   @media (min-width: $breakpoint_1)
     box-shadow: 0 5px 40px rgba($color_grey_500, 0.5)
     margin-bottom: 26px
+  @media (prefers-color-scheme: dark) and (min-width: $breakpoint_1)
+    box-shadow: 0 5px 20px rgba($color_grey_800, 0.5)
   img
       border-radius: 6px
       display: block

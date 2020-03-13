@@ -10,14 +10,20 @@
 
   h2
     +h4
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_50
 
   p
     +h5
     color: $color_grey_500
     max-width: 840px
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_300
   
   a
     color: $color_primary_500
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_200
 
   strong
     color: $color_grey_900

@@ -23,11 +23,13 @@ $menuItems: 6
       padding: 0 60px 0 40px
 
   .-menu-opened &
-    background: mix($color_primary_50, white, 20%)
+    background: $color_primary_50
     height: 100vh
     transition: all 0.3s ease-in
     transition-delay: 0.25s
     z-index: 100
+    @media (prefers-color-scheme: dark)
+      background: $color_grey_800
 
     &::before
       background: mix($color_primary_50, white, 20%)
@@ -57,7 +59,6 @@ $menuItems: 6
         background: $color_grey_300
       &:nth-child(3)
         background: $color_grey_200
-        
   &:active
     transition: all 0.2s
     .headerLogoBox
@@ -86,7 +87,7 @@ $menuItems: 6
   &:nth-child(1)
     background: $color_primary_500
     align-items: center
-    color: $color_primary_50
+    color: white
     display: flex
     font-size: 24px
     font-weight: 800
@@ -94,6 +95,8 @@ $menuItems: 6
     line-height: 1
     transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(14px)
     z-index: 3
+    @media (prefers-color-scheme: dark)
+      background: $color_primary_400
     span
       margin-left: 1px
       margin-top: -2px
@@ -147,12 +150,13 @@ $menuItems: 6
   background: black
   transition: all 0.3s $cubic
   transition-delay: 0s
+  @media (prefers-color-scheme: dark)
+    background: white
   &.-topBar
     transform: translateY(0px) rotate(0deg)
   &.-btmBar
     transform: translateY(6px) rotate(0deg)
   .-menu-opened &
-    background: black
     transition: all 0.4s $cubic
     transition-delay: 0.2s
     &.-topBar
@@ -192,6 +196,8 @@ $menuItems: 6
   &.-active
     a
       color: black
+      @media (prefers-color-scheme: dark)
+        color: white
 
   .-menu-opened &
     transform: scale(1) translateY(0px)
@@ -214,6 +220,8 @@ $menuItems: 6
     line-height: 2.35
     font-weight: 700
     width: 100%
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_300
     @media (min-width: $breakpoint_2)
       align-items: center
       display: flex
@@ -224,7 +232,9 @@ $menuItems: 6
       padding: 0 20px
     &:hover
       color: black
-      transition: color 0.2s        
+      transition: color 0.2s
+      @media (prefers-color-scheme: dark)
+        color: white
     &:active
       color: black
       transition: none

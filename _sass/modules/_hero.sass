@@ -20,6 +20,8 @@
   h1
     color: $color_grey_900
     margin-bottom: 20px
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_50
 
 .heroContentButton
   background: $color_primary_500
@@ -30,10 +32,16 @@
   margin-bottom: 40px
   padding: 13px 30px 15px
   text-decoration: none
+  @media (prefers-color-scheme: dark)
+    background: $color_primary_400
   &:hover
     background: $color_primary_600
+    @media (prefers-color-scheme: dark)
+      background: $color_primary_500
   &:active
     background: $color_primary_700
+    @media (prefers-color-scheme: dark)
+      background: $color_primary_600
   @media (min-width: $breakpoint_1)
     margin-bottom: 0
 
@@ -55,6 +63,8 @@
       color: $color_grey_500
       margin-bottom: 16px
       max-width: 17em
+      @media (prefers-color-scheme: dark)
+        color: $color_grey_400
       @media (min-width: $breakpoint_1)
         margin-bottom: 30px
   .heroImage
