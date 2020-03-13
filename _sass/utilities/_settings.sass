@@ -37,22 +37,19 @@ $breakpoint_1: 640px
 $breakpoint_2: 1024px
 $breakpoint_3: 1170px
 $breakpoint_4: 1600px
-@mixin containerPage
-  margin-left: auto
-  margin-right: auto
-  max-width: 1600px
-@mixin containerContent
-  margin-left: auto
-  margin-right: auto
-  max-width: 1240px
-  padding-left: 20px
-  padding-right: 20px
-  @media (min-width: $breakpoint_1)
-    padding-left: 30px
-    padding-right: 30px
+
+@mixin container
   @media (min-width: $breakpoint_2)
-    padding-left: 40px
-    padding-right: 40px
+    margin: 0 20px
+  > div
+    margin-left: auto
+    margin-right: auto
+    max-width: 1600px
+    padding-left: 16px
+    padding-right: 16px
+    @media (min-width: $breakpoint_1)
+      padding-left: 40px
+      padding-right: 40px
 
 // Typography
 @font-face
@@ -75,81 +72,73 @@ $breakpoint_4: 1600px
   font-size: 44px
   letter-spacing: -2px
   word-spacing: 3px
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 100px
 
 @mixin h2
-  color: $color_primary_900
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
-  font-weight: 600
+  font-weight: 800
   font-size: 32px
   line-height: 1.1
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 60px
 
 @mixin h3
-  color: $color_grey_800
-  font-family: source-serif-pro, serif
-  font-weight: 600
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif
+  font-weight: 800
   font-size: 26px
   line-height: 1.2
-  @media (min-width: $breakpoint_2)
-    font-size: 40px
+  @media (min-width: $breakpoint_3)
+    font-size: 48px
 
 @mixin h4
-  color: $color_grey_800
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   font-weight: 900
-  font-size: 22px
+  font-size: 20px
   line-height: 1.2
-  @media (min-width: $breakpoint_2)
-    font-size: 30px
+  @media (min-width: $breakpoint_3)
+    font-size: 34px
 
 @mixin h5
-  color: $color_grey_800
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   font-weight: 900
   font-size: 19px
   line-height: 1.2
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 26px
 
 @mixin h6
-  color: $color_grey_700
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   font-weight: 800
   font-size: 18px
   line-height: 1.3
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 22px
 
 @mixin body1
-  color: $color_primary_900
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   line-height: 1.5
   font-size: 18px
   font-weight: 500
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 24px
     letter-spacing: -0.6px
 
 @mixin body2
-  color: $color_primary_900
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   line-height: 1.3
   font-size: 16px
-  font-weight: 600
-  @media (min-width: $breakpoint_2)
+  font-weight: 500
+  @media (min-width: $breakpoint_3)
     font-size: 21px
 
 @mixin caption
-  color: $color_primary_900
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   line-height: 1.6
   font-size: 14px
   font-weight: 600
   letter-spacing: 0.1px
-  @media (min-width: $breakpoint_2)
+  @media (min-width: $breakpoint_3)
     font-size: 18px
     letter-spacing: 0.3px
 
@@ -157,11 +146,11 @@ $breakpoint_4: 1600px
   color: $color_grey_400
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
   line-height: 1.6
-  font-size: 14px
-  font-weight: 700
-  letter-spacing: 1px
+  font-size: 16px
+  font-weight: 900
+  letter-spacing: 0.8px
   text-transform: uppercase
-  @media (min-width: $breakpoint_2)
+  word-spacing: 1px
+  @media (min-width: $breakpoint_3)
     font-size: 20px
     letter-spacing: 0.5px
-    word-spacing: 1px

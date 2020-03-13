@@ -1,7 +1,13 @@
 .quoteSection
-  margin: 40px 20px
+  +container
+  margin-bottom: 40px
+  margin-top: 40px
+  > div
+    padding-top: 20px
+    padding-bottom: 20px
   @media (min-width: $breakpoint_2)
     margin: 80px 0 100px
+    padding: 20px
 
 .quoteSectionQuote
   margin: 0 auto

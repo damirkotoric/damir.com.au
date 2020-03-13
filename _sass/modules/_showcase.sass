@@ -1,113 +1,41 @@
 .showcase
-  background-color: $color_secondary_100
-  @media (min-width: $breakpoint_2)
-    margin: 0 20px 20px
+  +container
   > div
-    +containerPage
-    padding: 40px 20px
+    background-color: $color_secondary_100
+    padding-bottom: 40px
+    padding-top: 40px
     @media (min-width: $breakpoint_2)
-      padding: 100px 130px
+      padding: 60px 100px 80px
 
 .showcaseTitle
   +overline
   margin-bottom: 20px
   @media (min-width: $breakpoint_2)
-    margin-bottom: 40px
+    margin-bottom: 20px
 
 .showcaseCards
   display: flex
   flex-wrap: wrap
+  justify-content: space-between
 
 .showcaseCardsCard
-  flex: 1 0 auto
-  height: 300px
-  margin-bottom: 20px
-  overflow: hidden
+  min-height: 100px
+  margin: 0 0 40px
   width: 100%
   @media (min-width: $breakpoint_1)
-    height: 380px
-  // Row 1
-  &:nth-child(1)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      padding-right: 20px
-      width: 40%
-  &:nth-child(2)
-    @media (min-width: $breakpoint_1)
-      width: 60%
-  // Row 2
-  &:nth-child(3)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 320px
-      padding-right: 20px
-      width: 60%
-  &:nth-child(4)
-    @media (min-width: $breakpoint_1)
-      height: 320px
-      width: 40%
-  // Row 3
-  &:nth-child(5)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 560px
-      padding-right: 20px
-      width: 50%
-  &:nth-child(6)
-    @media (min-width: $breakpoint_1)
-      height: 560px
-      width: 50%
-  // Row 4
-  &:nth-child(7)
-    @media (min-width: $breakpoint_1)
-      height: 320px
-      padding-right: 20px
-      width: 60%
-  &:nth-child(8)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 320px
-      width: 40%
-  // Row 5
-  &:nth-child(9)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 400px
-      width: 100%
-  // Row 6
-  &:nth-child(10)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 400px
-      padding-right: 20px
-      width: 40%
-  &:nth-child(11)
-    img
-      object-position: 50% 50%
-    @media (min-width: $breakpoint_1)
-      height: 400px
-      width: 60%
-  img
-    border: 1px solid $color_secondary_200
-    border-radius: 4px
-    height: 100%
-    object-fit: cover
-    object-position: 0% 0%
-    width: 100%
+    margin: 0 -10px 40px
+    padding: 10px
+    width: 50%
+  @media (min-width: $breakpoint_3)
+    margin: 0 -20px 40px
+    padding: 20px
 
 .showcaseMore
   text-align: center
-  @media (min-width: $breakpoint_1)
-    padding-top: 10px
   @media (min-width: $breakpoint_2)
-    padding-top: 40px
+    padding-top: 30px
   a
+    +body2
     color: $color_primary_500
     font-weight: 600
     text-decoration: none
@@ -115,7 +43,7 @@
       color: $color_primary_600
       svg
         fill: $color_primary_600
-        transform: translateX(6px)
+        transform: translateX(4px)
     &:active
       color: $color_primary_900
       svg

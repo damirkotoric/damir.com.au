@@ -1,17 +1,20 @@
 .prompt
-  margin: 20px 0 100px
-  @media (min-width: $breakpoint_2)
-    margin: 0 20px 100px
+  +container
   > div
-    +containerPage
-    padding: 20px
+    margin-bottom: 100px
+    margin-top: 40px
+    padding-bottom: 20px
+    padding-top: 20px
     @media (min-width: $breakpoint_2)
       padding: 100px 130px
 
-  h6, p, strong
+  h2
     +h4
+
+  p
+    +h5
     color: $color_grey_500
-    max-width: 900px
+    max-width: 840px
   
   a
     color: $color_primary_500

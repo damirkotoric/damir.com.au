@@ -3,33 +3,21 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99)
 $menuItems: 6
 
 .header
-  position: absolute
-  top: 0
-  left: 0
+  +container
   overflow: hidden
+  position: relative
   transition: all 0.3s ease-out
   transition-delay: 0.2s
-  width: 100%
   z-index: 100
 
-  &::before
-    content: ''
-    height: 100%
-    left: 0
-    position: absolute
-    top: 0
-    transition: background 0.4s ease-out
-    width: 100%
-    z-index: -1
-
   > div
-    +containerPage
     margin-top: 10px
+    @media (min-width: $breakpoint_1)
+      margin-top: 20px
     @media (min-width: $breakpoint_2)
       align-items: center
       display: flex
       justify-content: space-between
-      margin-top: 30px
       padding: 0 20px
     @media (min-width: $breakpoint_3)
       padding: 0 60px 0 40px
@@ -54,7 +42,7 @@ $menuItems: 6
   user-select: none
   width: 80px
   @media (max-width: $breakpoint_2)
-    margin-left: 40px
+    margin-left: 26px
     padding-bottom: 36px
   .-menu-opened &
     opacity: 0
@@ -63,61 +51,72 @@ $menuItems: 6
     z-index: -1
   &:hover
     .headerLogoBox
+      &:nth-child(1)
+        background: $color_primary_700
       &:nth-child(2)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(6px)
+        background: $color_grey_300
       &:nth-child(3)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(12px)
+        background: $color_grey_200
+        
   &:active
+    transition: all 0.2s
     .headerLogoBox
+      &:nth-child(1)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(10px)
+        @media (min-width: $breakpoint_2)
+          transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(18px)
       &:nth-child(2)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(2px)
+        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(5px)
+        @media (min-width: $breakpoint_2)
+          transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(9px)
       &:nth-child(3)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(4px)
 
 .headerLogoBox
-  background: $color_primary_500
   border-radius: 6px
-  height: 34px
+  height: 40px
   left: 50%
   margin-top: 10px
   position: absolute
-  width: 34px
+  width: 40px
   top: 50%
-  transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg)
-  transition: transform 0.3s
+  transition: all 0.5s
   @media (min-width: $breakpoint_2)
-    height: 50px
-    width: 50px
+    height: 52px
+    width: 52px
   &:nth-child(1)
-    opacity: 0.4
-    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(0)
-    z-index: 1
+    background: $color_primary_500
+    align-items: center
+    color: $color_primary_50
+    display: flex
+    font-size: 24px
+    font-weight: 800
+    justify-content: center
+    line-height: 1
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(14px)
+    z-index: 3
+    span
+      margin-left: 1px
+      margin-top: -2px
+    @media (min-width: $breakpoint_2)
+      font-size: 32px
+      transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(22px)
   &:nth-child(2)
-    opacity: 0.7
-    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(6px)
+    background: $color_primary_200
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(7px)
     z-index: 2
     @media (min-width: $breakpoint_2)
       transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(10px)
   &:nth-child(3)
-    align-items: center
-    color: $color_primary_50
-    display: flex
-    font-size: 18px
-    font-weight: 900
-    justify-content: center
-    line-height: 1
-    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(12px)
-    z-index: 3
-    @media (min-width: $breakpoint_2)
-      font-size: 30px
-      transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(20px)
+    background: $color_primary_100
+    transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(0)
+    z-index: 1
 
 .headerBurger
   -webkit-tap-highlight-color: transparent
   cursor: pointer
   display: block
   float: right
-  height: 50px
+  height: 54px
   margin-right: 5px
   opacity: 0.2
   position: relative
@@ -164,12 +163,17 @@ $menuItems: 6
 .headerMenu
   clear: both
   pointer-events: none
-  position: relative
+  position: absolute
+  left: 0
   list-style: none
+  top: 100px
   @media (min-width: $breakpoint_2)
     align-items: center
     display: flex
     pointer-events: auto
+    position: relative
+    right: inherit
+    top: inherit
   .-menu-opened &
     pointer-events: auto
 
@@ -187,7 +191,7 @@ $menuItems: 6
     transform: scale(1) translateY(0)
   &.-active
     a
-      color: $color_primary_500
+      color: black
 
   .-menu-opened &
     transform: scale(1) translateY(0px)
@@ -203,28 +207,24 @@ $menuItems: 6
   a
     display: block
     position: relative
-    color: $color_grey_600
+    color: $color_grey_500
     text-decoration: none
     font-size: 22px
     letter-spacing: 0.03em
     line-height: 2.35
-    font-weight: 600
+    font-weight: 700
     width: 100%
     @media (min-width: $breakpoint_2)
       align-items: center
       display: flex
-      font-size: 17px
+      font-size: 18px
       letter-spacing: 0.05em
       padding: 0 4px
       height: 100px
       padding: 0 20px
     &:hover
-      color: $color_grey_800
-      transition: color 0.2s
-      @media (min-width: $breakpoint_2)
-        color: mix($color_grey_600, $color_primary_500, 60%)
+      color: black
+      transition: color 0.2s        
     &:active
       color: black
       transition: none
-      @media (min-width: $breakpoint_2)
-        color: $color_grey_700
