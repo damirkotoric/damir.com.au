@@ -4,17 +4,16 @@
   position: relative
 
   > div
-    margin-top: 20px
-    margin-bottom: 20px
     padding-bottom: 20px
     padding-top: 40px
     @media (min-width: $breakpoint_1)
       margin-bottom: 40px
     @media (min-width: $breakpoint_2)
       margin-bottom: 80px
-      padding: 0 100px
+      padding: 0 80px
 
 .heroContent
+  padding-top: 80px
   position: relative
   z-index: 1
   h1
@@ -22,6 +21,15 @@
     margin-bottom: 20px
     @media (prefers-color-scheme: dark)
       color: $color_grey_50
+  p
+    +h5
+    color: $color_grey_500
+    margin-bottom: 20px
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_400
+    @media (min-width: $breakpoint_1)
+      margin-bottom: 30px
+      max-width: 30em
 
 .heroContentButton
   background: $color_primary_500
@@ -29,7 +37,7 @@
   color: white
   display: inline-block
   font-weight: 700
-  margin-bottom: 40px
+  margin-bottom: 30px
   padding: 13px 30px 15px
   text-decoration: none
   @media (prefers-color-scheme: dark)
@@ -43,7 +51,7 @@
     @media (prefers-color-scheme: dark)
       background: $color_primary_600
   @media (min-width: $breakpoint_1)
-    margin-bottom: 0
+    margin-bottom: 10px
 
 #heroIndex
   > div
@@ -52,29 +60,25 @@
       display: flex
       justify-content: center
   .heroContent
+    h1
+      line-height: 0.92
+    p
+      @media (min-width: $breakpoint_1)
+        max-width: 22em
     @media (min-width: $breakpoint_1)
       flex-grow: 1
       padding-right: 40px
       padding-top: 60px
-    h1
-      line-height: 0.92
-    p
-      +h5
-      color: $color_grey_500
-      margin-bottom: 20px
-      @media (prefers-color-scheme: dark)
-        color: $color_grey_400
-      @media (min-width: $breakpoint_1)
-        margin-bottom: 30px
-        max-width: 22em
   .heroImage
     display: block
     height: 300px
+    margin-bottom: 20px
     padding: 20px 0 0 20px
     position: relative
     z-index: 0
     @media (min-width: $breakpoint_1)
       height: 400px
+      margin-bottom: 0
       width: 400px
     @media (min-width: $breakpoint_2)
       height: 500px

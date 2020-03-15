@@ -12,7 +12,7 @@ $color_primary_900: darken($color_primary_500, 20%)
 
 $color_secondary_200: #ede0de
 $color_secondary_50: lighten($color_secondary_200, 8%)
-$color_secondary_100: lighten($color_secondary_200, 4%)
+$color_secondary_100: lighten($color_secondary_200, 5%)
 $color_secondary_300: darken($color_secondary_200, 4%)
 $color_secondary_400: darken($color_secondary_200, 10%)
 $color_secondary_500: darken($color_secondary_200, 20%)
@@ -40,7 +40,9 @@ $breakpoint_4: 1600px
 
 @mixin container
   @media (min-width: $breakpoint_2)
-    margin: 0 20px
+    padding: 20px
+  @media (min-width: $breakpoint_3)
+    padding: 0 30px 30px
   > div
     margin-left: auto
     margin-right: auto

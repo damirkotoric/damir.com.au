@@ -1,26 +1,30 @@
 .portfolio
-  @media (min-width: $breakpoint_2)
-    margin: 0 20px 20px
+  +container
   > div
-    +container
-    background-color: $color_secondary_100
-    padding: 40px 20px
+    padding-bottom: 40px
     @media (min-width: $breakpoint_2)
-      padding: 50px 130px
+      padding: 0 80px
 
-.portfolioItem
-  display: block
-  text-decoration: none
-  width: 50%
-  &:hover
-    h2
-      text-decoration: underline
-  img
-    border-radius: 4px
-  h2
-    +h4
-    color: $color_primary_500
-    margin-top: 20px
-  p
-    +h6
-    margin-top: 10px
+.portfolioCards
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.portfolioCardsCard
+  min-height: 100px
+  margin: 0 0 40px
+  width: 100%
+  @media (min-width: $breakpoint_1)
+    margin: 0 -10px 40px
+    padding: 10px
+    width: 50%
+  @media (min-width: $breakpoint_3)
+    margin: 0 -20px 40px
+    padding: 20px
+
+.portfolioQuote
+  margin-bottom: 90px
+  margin-top: 40px
+  @media (min-width: $breakpoint_1)
+    margin-bottom: 160px
+    margin-top: 100px

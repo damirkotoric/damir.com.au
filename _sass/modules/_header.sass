@@ -23,7 +23,7 @@ $menuItems: 6
       padding: 0 60px 0 40px
 
   .-menu-opened &
-    background: $color_secondary_50
+    background: $color_secondary_100
     height: 100vh
     transition: all 0.3s ease-in
     transition-delay: 0.25s
@@ -62,13 +62,11 @@ $menuItems: 6
     transition: all 0.2s
     .headerLogoBox
       &:nth-child(1)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(10px)
-        @media (min-width: $breakpoint_2)
-          transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(24px)
+        background: $color_primary_700
       &:nth-child(2)
-        transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(5px)
-        @media (min-width: $breakpoint_2)
-          transform: translateX(-50%) translateY(-50%) rotateX(45deg) rotateZ(-45deg) translateZ(9px)
+        background: $color_primary_300
+      &:nth-child(3)
+        background: $color_primary_200
 
 .headerLogoBox
   border-radius: 6px
@@ -208,7 +206,8 @@ $menuItems: 6
       transition-delay: #{0.56 - $i * 0.07}s
 
   a
-    display: block
+    align-items: center
+    display: flex
     position: relative
     color: $color_grey_500
     text-decoration: none
@@ -220,8 +219,6 @@ $menuItems: 6
     @media (prefers-color-scheme: dark)
       color: $color_grey_300
     @media (min-width: $breakpoint_2)
-      align-items: center
-      display: flex
       font-size: 18px
       letter-spacing: 0.05em
       padding: 0 4px
@@ -235,3 +232,11 @@ $menuItems: 6
     &:active
       color: black
       transition: none
+      @media (prefers-color-scheme: dark)
+        color: $color_grey_400
+  svg
+    height: 30px
+    margin-left: 8px
+    margin-top: -2px
+    @media (min-width: $breakpoint_2)
+      height: 22px

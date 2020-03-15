@@ -1,10 +1,8 @@
 .quote
   +body2
-  margin-top: 25px
   padding-top: 37px
   position: relative
   @media (min-width: $breakpoint_1)
-    margin-top: 40px
     padding-top: 45px
 
   &.-large
@@ -33,7 +31,7 @@
       height: 70px
       width: 80px
     & > path
-      fill: $color_secondary_500
+      fill: $color_grey_300
       @media (prefers-color-scheme: dark)
         fill: $color_grey_600
 
@@ -57,12 +55,24 @@
   margin-right: 15px
   @media (min-width: $breakpoint_2)
     margin-right: 25px
+  &:hover
+    img
+      border-color: $color_primary_400
+      @media (prefers-color-scheme: dark)
+        border-color: $color_primary_300
+  &:active
+    img
+      border-color: $color_primary_600
+      transition: none
+      @media (prefers-color-scheme: dark)
+        border-color: $color_primary_400
   img
     border: 4px solid $color_primary_500
     border-radius: 50%
     display: block
     height: 70px
     max-width: none
+    transition: all 0.2s
     width: 70px
     @media (prefers-color-scheme: dark)
       border-color: $color_primary_200
@@ -83,11 +93,14 @@
     @media (prefers-color-scheme: dark)
       color: $color_primary_200
     &:hover
-      border-color: $color_grey_400
+      color: $color_primary_400
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_300
     &:active
-      border-color: $color_grey_600
-      color: black
+      color: $color_primary_600
       transition: none
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_400
   span
     +caption
     color: $color_grey_600

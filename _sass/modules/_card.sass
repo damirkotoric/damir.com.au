@@ -2,16 +2,6 @@
   cursor: cover
   text-decoration: none
 
-  &:hover
-    h3
-      color: $color_grey_800
-      @media (prefers-color-scheme: dark)
-        color: white
-    .cardImage
-      img
-        transform: scale(1.02)
-        transition-delay: 0.3s
-
   h3
     +h4
     color: $color_grey_700
@@ -24,9 +14,19 @@
     margin: 0
     @media (prefers-color-scheme: dark)
       color: $color_grey_300
-  
 
-.cardImage
+a.card
+  &:hover
+    h3
+      color: $color_grey_800
+      @media (prefers-color-scheme: dark)
+        color: white
+    .cardMedia
+      img
+        transform: scale(1.02)
+        transition-delay: 0.3s
+
+.cardMedia
   background: $color_secondary_200
   border-radius: 6px
   box-shadow: 0 5px 20px rgba($color_grey_500, 0.4)
@@ -35,12 +35,51 @@
   @media (min-width: $breakpoint_1)
     box-shadow: 0 5px 40px rgba($color_grey_500, 0.5)
     margin-bottom: 26px
+  @media (prefers-color-scheme: dark)
+    box-shadow: 0 5px 20px rgba($color_grey_800, 0.4)
   @media (prefers-color-scheme: dark) and (min-width: $breakpoint_1)
-    box-shadow: 0 5px 20px rgba($color_grey_800, 0.5)
+    box-shadow: 0 5px 40px rgba($color_grey_800, 0.5)
   img
-      border-radius: 6px
-      display: block
-      height: 100%
-      object-fit: cover
-      transition: all .5s ease-out
-      width: 100%
+    border-radius: 6px
+    display: block
+    height: 100%
+    object-fit: cover
+    transition: all .5s ease-out
+    width: 100%
+  video
+    display: block
+    height: auto
+    width: 100%
+
+.cardButton
+  color: $color_primary_500
+  display: block
+  margin-top: 10px
+  text-decoration: none
+  transition: all 0.2s
+  @media (prefers-color-scheme: dark)
+    color: $color_primary_200
+  &:hover
+    color: $color_primary_600
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_300
+    svg
+      fill: $color_primary_600
+      @media (prefers-color-scheme: dark)
+        fill: $color_primary_300
+  &:active
+    color: $color_primary_800
+    transition: none
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_400
+    svg
+      fill: $color_primary_800
+      @media (prefers-color-scheme: dark)
+        fill: $color_primary_400
+  svg
+    fill: $color_primary_500
+    height: 16px
+    padding-left: 6px
+    width: auto
+    @media (prefers-color-scheme: dark)
+      fill: $color_primary_200

@@ -6,40 +6,133 @@ activeNav: 2
 ---
 
 <div class="hero" id="heroPortfolio">
-  <div class="heroContent">
-    <h1>Portfolio</h1>
-    <h4>The most interesting projects I've worked on across web, mobile, AR and VR design, including innovation and design thinking facilitation.</h4>
+  <div>
+    <div class="heroContent">
+      <h1>Portfolio</h1>
+      <p>A diverse history of work covering a wide range of disciplines, industries and digital product design for web, iOS and Android, and XR.</p>
+    </div>
   </div>
 </div>
 
 <div class="portfolio">
   <div>
-    <a class="portfolioItem" href="" target="_blank" rel="noopener">
-      <img src="/assets/images/bookingcom.jpg" alt="">
-      <h2>Booking.com</h2>
-      <p>Designing the payment experience on the world's biggest accommodation site.</p>
-    </a>
-    <blockquote class="quote -large">
-      <div class="quoteIcon">
-        {% include iconQuote.svg %}
+    <div class="portfolioCards">
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/booking.html %}
       </div>
-      <div class="quoteText">Damir has excellent design acumen (in and outside of code), an uncompromising dedication to ethics, and a drive to elevate products to their greatest potential.</div>
-      <div class="quoteAuthor">
-        <a class="quoteAuthorImage" href="https://www.linkedin.com/in/christopher-sledge-18158b54/" target="_blank" rel="noopener">
-          <img src="/assets/images/chris_sledge.jpg" alt="" width="500" height="500">
-        </a>
-        <div class="quoteAuthorContent">
-          <a href="https://www.linkedin.com/in/christopher-sledge-18158b54/" target="_blank" rel="noopener">Christopher Sledge</a>
-          <span>UX Designer at Booking.com</span>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/bookingPayments.html %}
+      </div>
+      <blockquote class="portfolioQuote quote -large">
+        <div class="quoteIcon">
+          {% include iconQuote.svg %}
         </div>
+        <div class="quoteText">Damir has excellent design acumen (in and outside of code), an uncompromising dedication to ethics, and a drive to elevate products to their greatest potential.</div>
+        <div class="quoteAuthor">
+          <a class="quoteAuthorImage" href="https://www.linkedin.com/in/christopher-sledge-18158b54/" target="_blank" rel="noopener">
+            <img src="/assets/images/chris_sledge.jpg" alt="" width="500" height="500">
+          </a>
+          <div class="quoteAuthorContent">
+            <a href="https://www.linkedin.com/in/christopher-sledge-18158b54/" target="_blank" rel="noopener">Christopher Sledge</a>
+            <span>UX Designer at Booking.com</span>
+          </div>
+        </div>
+      </blockquote>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/ga.html %}
       </div>
-    </blockquote>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/publicArt.html %}
+      </div>
+      <blockquote class="portfolioQuote quote -large">
+        <div class="quoteIcon">
+          {% include iconQuote.svg %}
+        </div>
+        <div class="quoteText">Damir is highly empathetic and measured which made him an excellent mentor and guide to others in their UX journey.</div>
+        <div class="quoteAuthor">
+          <a class="quoteAuthorImage" href="https://www.linkedin.com/in/matthewmccraejohnson" target="_blank" rel="noopener">
+            <img src="/assets/images/matt.jpg" alt="" width="500" height="500">
+          </a>
+          <div class="quoteAuthorContent">
+            <a href="https://www.linkedin.com/in/matthewmccraejohnson" target="_blank" rel="noopener">Matthew McCrae Johnson</a>
+            <span>Program Producer at General Assembly</span>
+          </div>
+        </div>
+      </blockquote>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/ideaverse.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/giza.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/envato.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/giza.html %}
+      </div>
+      <blockquote class="portfolioQuote quote -large">
+        <div class="quoteIcon">
+          {% include iconQuote.svg %}
+        </div>
+        <div class="quoteText">Damir is a one-of-a-kind excellent designer with a real sense for product: An unbeatable match, making it very satisfying to have been able to work together.</div>
+        <div class="quoteAuthor">
+          <a class="quoteAuthorImage" href="https://www.linkedin.com/in/roelofpieters/" target="_blank" rel="noopener">
+            <img src="/assets/images/roelof.jpg" alt="" width="500" height="500">
+          </a>
+          <div class="quoteAuthorContent">
+            <a href="https://www.linkedin.com/in/roelofpieters/" target="_blank" rel="noopener">Roelof Pieters</a>
+            <span>CEO at creative.ai</span>
+          </div>
+        </div>
+      </blockquote>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/oracy.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/iarps.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/orpheus.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/orpheusDesignSystem.html %}
+      </div>
+      <blockquote class="portfolioQuote quote -large">
+        <div class="quoteIcon">
+          {% include iconQuote.svg %}
+        </div>
+        <div class="quoteText">Damir is one of the best designers I have worked with in my 10+ year career as a web developer. He inherently understands the technicality of front end development, empathizes with the user, and cuts straight through to value for client and user. He is multi-talented and I would recommend him for product, design, or front-end development roles.</div>
+        <div class="quoteAuthor">
+          <a class="quoteAuthorImage" href="https://www.linkedin.com/in/daniel-rekshan/" target="_blank" rel="noopener">
+            <img src="/assets/images/daniel.jpg" alt="" width="500" height="500">
+          </a>
+          <div class="quoteAuthorContent">
+            <a href="https://www.linkedin.com/in/daniel-rekshan/" target="_blank" rel="noopener">Daniel Rekshan</a>
+            <span>Fine artist and web developer at Archimedes Digital</span>
+          </div>
+        </div>
+      </blockquote>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/designGenerator.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/unstock.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/tripureshwor.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/gizaVirtual.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/archimedesDigital.html %}
+      </div>
+      <div class="portfolioCardsCard">
+        {% include portfolioItems/zjumaa.html %}
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="prompt">
-  <div>
-    <h4><strong>I'm available for hire.</strong></h4>
-    <p>Predominently located in Geelong, Australia, I work remotely with clients from all over the world. <a href="" rel="noopener">Get in touch</a> and let’s talk about bringing your next project to life.</p>
-  </div>
-</div>
+{% include prompt.html %}
