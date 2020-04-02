@@ -54,18 +54,6 @@ $breakpoint_4: 1600px
       padding-right: 40px
 
 // Typography
-@font-face
-  font-family: source-serif-pro
-  font-weight: 900
-  font-style: normal
-  src: url('/assets/fonts/source-serif-pro/WOFF2/TTF/SourceSerifPro-Black.ttf.woff2') format('woff2'), url('/assets/fonts/source-serif-pro/WOFF/OTF/SourceSerifPro-Black.otf.woff') format('woff'), url('/assets/fonts/source-serif-pro/OTF/SourceSerifPro-Black.otf') format('opentype'), url('/assets/fonts/source-serif-pro/TTF/SourceSerifPro-Black.ttf') format('truetype')
-
-@font-face
-  font-family: source-serif-pro
-  font-weight: 600
-  font-style: normal
-  src: url('/assets/fonts/source-serif-pro/WOFF2/TTF/SourceSerifPro-Bold.ttf.woff2') format('woff2'), url('/assets/fonts/source-serif-pro/WOFF/OTF/SourceSerifPro-Bold.otf.woff') format('woff'), url('/assets/fonts/source-serif-pro/OTF/SourceSerifPro-Bold.otf') format('opentype'), url('/assets/fonts/source-serif-pro/TTF/SourceSerifPro-Bold.ttf') format('truetype')
-
 @mixin h1
   color: $color_primary_900
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
@@ -118,6 +106,8 @@ $breakpoint_4: 1600px
     font-size: 23px
   @media (min-width: $breakpoint_3)
     font-size: 30px
+  strong
+    font-weight: inherit
 
 @mixin h6
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
@@ -131,7 +121,7 @@ $breakpoint_4: 1600px
 
 @mixin body1
   font-family: -apple-system, BlinkMacSystemFont, sans-serif
-  line-height: 1.5
+  line-height: 1.3
   font-size: 18px
   font-weight: 500
   @media (min-width: $breakpoint_2)
@@ -139,6 +129,10 @@ $breakpoint_4: 1600px
   @media (min-width: $breakpoint_3)
     font-size: 24px
     letter-spacing: -0.6px
+  strong
+    font-weight: 800
+    a
+      font-weight: 800
 
 @mixin body2
   font-family: -apple-system, BlinkMacSystemFont, sans-serif

@@ -1,51 +1,120 @@
 .disciplines
-  +container
-  > div
-    background: white
-    @media (prefers-color-scheme: dark)
-      background-color: $color_grey_700
-    @media (min-width: $breakpoint_1)
-      align-items: stretch
-      display: flex
-    @media (min-width: $breakpoint_2)
-      padding: 30px
-
-.disciplinesImage
-  padding-top: 20px
-  width: 100%
+  margin: 0 auto
+  max-width: 1600px
   @media (min-width: $breakpoint_1)
-    padding: 20px 0 20px 0
-    width: 40%
-  @media (min-width: $breakpoint_2)
-    padding: 0
-  img
-    height: 100%
-    max-width: none
-    object-fit: cover
-    object-position: 60% 45%
-    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 12px
+    grid-auto-flow: columns
+    padding: 30px
 
-.disciplinesContent
-  padding-bottom: 20px
+.disciplinesDiscipline
+  background-color: white
+  background-size: cover
+  border-color: $color_secondary_200
+  border-style: solid
+  border-width: 1px 0 1px 0
+  color: inherit
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-bottom: 1px
+  overflow: hidden
+  text-decoration: none
   @media (min-width: $breakpoint_1)
-    padding: 40px
-    width: 60%
-  @media (min-width: $breakpoint_3)
-    padding: 40px 80px
-  
+    border-width: 1px
+    margin-bottom: 0
+  @media (prefers-color-scheme: dark)
+    background-color: $color_grey_700
+    border: none
+    color: $color_grey_50
   h2
-    margin-top: 20px
-
+    +h4
   p
-    +body2
-    color: $color_grey_500
+    +body1
+    &:last-of-type
+      margin-bottom: 0
+  &#design, &#development
+    img
+      border-radius: 0
+      box-shadow: none
+      height: auto
+      object-fit: fill
+      width: 100%
+  &#design
+    .disciplinesDisciplineImage
+      padding: 10px 16px 40px 0
+      @media (min-width: $breakpoint_2)
+        padding: 30px 60px 40px 0
+  &#designSprint
+    .disciplinesDisciplineImage
+      img
+        height: auto
+        object-fit: fill
+        width: 100%
+  &#strategy
+    background-image: linear-gradient(-45deg, desaturate($color_primary_500, 30%), desaturate($color_primary_300, 30%))
+    color: white
     @media (prefers-color-scheme: dark)
-      color: $color_grey_300
-
-  strong
-    color: $color_grey_900
+      background-image: linear-gradient(-45deg, desaturate($color_primary_700, 30%), desaturate($color_primary_500, 30%))
+    .disciplinesDisciplineButton
+      color: $color_primary_100
+      > svg
+        fill: $color_primary_100
+    .disciplinesDisciplineImage
+      > svg
+        display: block
+        height: 200px
+        margin: 0 auto
+        width: auto
+        @media (min-width: $breakpoint_2)
+          height: 260px
+  &#eCommerce
+    background-image: linear-gradient(-45deg, desaturate($color_secondary_500, 30%), desaturate($color_secondary_300, 30%))
     @media (prefers-color-scheme: dark)
-      color: $color_grey_200
+      background: $color_grey_700
+    .disciplinesDisciplineImage
+      > svg
+        display: block
+        height: auto
+        margin: 0 auto
+        width: 80%
+        @media (min-width: $breakpoint_1)
+          margin-top: -60px
+          width: 60%
+        @media (min-width: $breakpoint_2)
+          margin-top: -210px
+        @media (prefers-color-scheme: dark)
+          > path
+            fill: white
+  &#development
+    .disciplinesDisciplineImage
+      height: 100%
+      margin-left: -5px
+      padding: 0
+      @media (min-width: $breakpoint_2)
+        margin-left: 0
+        padding-left: 30px
+      > img
+        height: 100%
+        object-fit: cover
+        object-position: 0% 0%
 
-.disciplinesContentTitle
-  +overline
+.disciplinesDisciplineContent
+  padding: 30px 16px 0
+  @media (min-width: $breakpoint_2)
+    padding: 60px 80px 0 60px
+
+.disciplinesDisciplineImage
+  padding: 10px 16px 40px
+  @media (min-width: $breakpoint_2)
+    padding: 20px 60px 60px
+  > img
+    box-shadow: 0 2px 20px rgba(black, 0.2)
+    border-radius: 6px
+    display: block
+    height: 200px
+    object-fit: cover
+    width: 100%
+    @media (min-width: $breakpoint_2)
+      height: 350px

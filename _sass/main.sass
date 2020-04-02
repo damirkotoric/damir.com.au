@@ -9,6 +9,7 @@
 @import "modules/cards"
 @import "modules/companies"
 @import "modules/disciplines"
+@import "modules/disciplinesPreview"
 @import "modules/header"
 @import "modules/hero"
 @import "modules/map"
@@ -56,12 +57,10 @@ h6
 p
   +body1
   margin: 15px 0
-  @media (min-width: $breakpoint_2)
-    margin: 30px 0
 
   a
     color: $color_grey_700
-    transition: color 0.4s
+    transition: color 0.2s
     &:hover
       color: $color_primary_500
     &:active
@@ -89,11 +88,6 @@ aside
 abbr
   border-bottom: 1px dotted rgba(black, 0.3)
   text-decoration: none
-
-strong
-  font-weight: 700
-  a
-    font-weight: 700
 
 ul, ol
   +body1

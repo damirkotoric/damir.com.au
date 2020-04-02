@@ -33,12 +33,9 @@ a.card
   margin-bottom: 16px
   overflow: hidden
   @media (min-width: $breakpoint_1)
-    box-shadow: 0 5px 40px rgba($color_grey_500, 0.5)
     margin-bottom: 26px
   @media (prefers-color-scheme: dark)
     box-shadow: 0 5px 20px rgba($color_grey_800, 0.4)
-  @media (prefers-color-scheme: dark) and (min-width: $breakpoint_1)
-    box-shadow: 0 5px 40px rgba($color_grey_800, 0.5)
   img
     border-radius: 6px
     display: block
@@ -52,34 +49,4 @@ a.card
     width: 100%
 
 .cardButton
-  color: $color_primary_500
-  display: block
-  margin-top: 10px
-  text-decoration: none
-  transition: all 0.2s
-  @media (prefers-color-scheme: dark)
-    color: $color_primary_200
-  &:hover
-    color: $color_primary_600
-    @media (prefers-color-scheme: dark)
-      color: $color_primary_300
-    svg
-      fill: $color_primary_600
-      @media (prefers-color-scheme: dark)
-        fill: $color_primary_300
-  &:active
-    color: $color_primary_800
-    transition: none
-    @media (prefers-color-scheme: dark)
-      color: $color_primary_400
-    svg
-      fill: $color_primary_800
-      @media (prefers-color-scheme: dark)
-        fill: $color_primary_400
-  svg
-    fill: $color_primary_500
-    height: 16px
-    padding-left: 6px
-    width: auto
-    @media (prefers-color-scheme: dark)
-      fill: $color_primary_200
+  padding-top: 10px !important

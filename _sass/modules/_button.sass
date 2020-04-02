@@ -9,34 +9,15 @@
   transition: all 0.3s
   user-select: none
   white-space: nowrap
-  > svg
-    fill: $color_primary_500
-    height: 16px
-    position: absolute
-    right: 24px
-    top: 50%
-    transform: translateY(-50%)
-    transition: transform 0.2s ease-out
-    @media (min-width: $breakpoint_2)
-      height: 20px
-      right: 35px
   &:hover
     background: rgba($color_primary_500, 0.1)
-    > svg
-      transform: translateX(3px) translateY(-50%)
   &:active
     background: rgba($color_primary_500, 0.2)
     transition: none
-    > svg
-      transform: translateX(3px) translateY(-50%) scale(0.9)
-      transition: none
 
-  &.-text
+  &.-text, &.-arrow
     border: none
     border-radius: 0
-    > svg
-      @media (min-width: $breakpoint_2)
-        right: 32px
     &:hover
       background: none
       color: $color_primary_600
@@ -44,6 +25,41 @@
       background: none
       color: $color_primary_900
       transition: none
+
+  &.-arrow
+    +body2
+    color: $color_primary_500
+    display: inline-block
+    font-weight: 600
+    padding: 15px 0
+    text-decoration: none
+    transition: all 0.2s
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_200
+    &:hover
+      color: $color_primary_500
+      text-decoration: underline
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_200
+    &:active
+      color: $color_primary_400
+      transition: none
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_300
+      svg
+        fill: $color_primary_400
+        @media (prefers-color-scheme: dark)
+          fill: $color_primary_300
+    svg
+      fill: $color_primary_500
+      height: 12px
+      margin-left: 8px
+      position: relative
+      top: 1px
+      @media (min-width: $breakpoint_2)
+        height: 16px
+      @media (prefers-color-scheme: dark)
+        fill: $color_primary_200
 
   &.-dark
     border-color: $color_primary_300

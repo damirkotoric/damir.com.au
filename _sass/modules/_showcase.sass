@@ -36,27 +36,3 @@
   text-align: center
   @media (min-width: $breakpoint_2)
     padding-top: 30px
-  a
-    +body2
-    color: $color_primary_500
-    font-weight: 600
-    text-decoration: none
-    transition: all 0.2s
-    @media (prefers-color-scheme: dark)
-      color: $color_primary_200
-    &:hover
-      color: $color_primary_300
-      svg
-        fill: $color_primary_300
-    &:active
-      color: $color_primary_400
-      transition: none
-      svg
-        fill: $color_primary_400
-  svg
-    fill: $color_primary_500
-    height: 16px
-    margin-left: 10px
-    transition: transform 0.2s ease-out
-    @media (prefers-color-scheme: dark)
-      fill: $color_primary_200
