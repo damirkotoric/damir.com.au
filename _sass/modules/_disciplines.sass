@@ -66,9 +66,10 @@
         display: block
         height: 200px
         margin: 0 auto
-        width: auto
+        width: 160px
         @media (min-width: $breakpoint_2)
           height: 260px
+          width: auto
   &#eCommerce
     background-image: linear-gradient(-45deg, desaturate($color_secondary_500, 30%), desaturate($color_secondary_300, 30%))
     @media (prefers-color-scheme: dark)
@@ -78,12 +79,12 @@
         display: block
         height: auto
         margin: 0 auto
-        width: 80%
+        width: 200px
         @media (min-width: $breakpoint_1)
           margin-top: -60px
-          width: 60%
         @media (min-width: $breakpoint_2)
           margin-top: -210px
+          width: 360px
         @media (prefers-color-scheme: dark)
           > path
             fill: white
