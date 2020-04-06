@@ -1,0 +1,30 @@
+.gallery
+  margin: 0 auto
+  max-width: 1200px
+  padding: 0 16px
+  width: 100%
+  @media (min-width: $breakpoint_1)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.galleryRow
+  margin-bottom: 12px
+  @media (min-width: $breakpoint_1)
+    display: flex
+    flex-wrap: nowrap
+
+.galleryItem
+  margin-bottom: 12px
+  @media (min-width: $breakpoint_1)
+    margin-bottom: 0
+    margin-right: 12px
+    &:last-child
+      margin-right: 0
+  img
+    display: block
+    margin: 0 auto
+    @media (min-width: $breakpoint_1)
+      height: 100%
+      object-fit: cover
+      width: 100%

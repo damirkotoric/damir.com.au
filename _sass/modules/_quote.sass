@@ -2,6 +2,9 @@
   +body2
   padding-top: 37px
   position: relative
+  border: none
+  @media (min-width: $breakpoint_2)
+    transform: translateX(0)
   @media (min-width: $breakpoint_1)
     padding-top: 45px
 
@@ -12,7 +15,7 @@
       padding-left: 120px
       padding-top: 15px
     div
-      +h4
+      +heading4
 
 .quoteIcon
   display: block
@@ -36,7 +39,7 @@
         fill: $color_grey_600
 
 .quoteText
-  +h4
+  +heading4
   color: $color_grey_600
   display: block
   margin-top: 10px
@@ -98,6 +101,7 @@
     +caption
     color: $color_grey_600
     display: block
+    font-style: normal
     line-height: 1.3
     @media (prefers-color-scheme: dark)
       color: $color_grey_400

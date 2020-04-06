@@ -1,18 +1,23 @@
 .button
   +body1
-  border: 3px solid $color_primary_500
   border-radius: 100px
+  border-style: solid
+  border-width: 3px
   color: $color_primary_500
   display: inline-block
-  padding: 15px 50px 15px 20px
+  font-weight: 500
+  padding: 15px 20px
   position: relative
+  text-decoration: none
   transition: all 0.3s
   user-select: none
   white-space: nowrap
+  @media (prefers-color-scheme: dark)
+    color: $color_primary_200
   &:hover
-    background: rgba($color_primary_500, 0.1)
+    color: $color_primary_100
   &:active
-    background: rgba($color_primary_500, 0.2)
+    color: $color_primary_300
     transition: none
 
   &.-text, &.-arrow
@@ -30,9 +35,7 @@
     +body2
     color: $color_primary_500
     display: inline-block
-    font-weight: 600
     padding: 15px 0
-    text-decoration: none
     transition: all 0.2s
     @media (prefers-color-scheme: dark)
       color: $color_primary_200

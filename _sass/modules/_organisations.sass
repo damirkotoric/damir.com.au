@@ -1,6 +1,8 @@
 .organisations
   +container
   margin-bottom: 20px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 0
   > div
     background: white
     padding-bottom: 20px
@@ -8,7 +10,6 @@
     @media (prefers-color-scheme: dark)
       background-color: $color_grey_700
     @media (min-width: $breakpoint_2)
-      margin-bottom: 0
       padding: 80px 100px
 
   p

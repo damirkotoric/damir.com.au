@@ -10,11 +10,13 @@
 @import "modules/companies"
 @import "modules/disciplines"
 @import "modules/disciplinesPreview"
+@import "modules/gallery"
 @import "modules/header"
 @import "modules/hero"
 @import "modules/map"
 @import "modules/organisations"
 @import "modules/portfolio"
+@import "modules/post"
 @import "modules/prompt"
 @import "modules/quote"
 @import "modules/quoteSection"
@@ -25,7 +27,7 @@
   box-sizing: border-box
 
 html, body
-  background-color: $color_secondary_100
+  background-color: $color_secondary_50
   @media (prefers-color-scheme: dark)
     background-color: $color_grey_800
 
@@ -37,40 +39,63 @@ body
     overflow: hidden
 
 h1
-  +h1
+  +heading1
 
 h2
-  +h2
+  +heading2
 
 h3
-  +h3
+  +heading3
 
 h4
-  +h4
+  +heading4
 
 h5
-  +h5
+  +heading5
 
 h6
-  +h6
+  +heading6
 
-p
+p, blockquote
   +body1
-  margin: 15px 0
+  color: $color_grey_700
+  margin: 20px 0
+  @media (prefers-color-scheme: dark)
+    color: $color_grey_300
+  @media (min-width: $breakpoint_2)
+    margin: 30px 0
 
   a
     color: $color_grey_700
     transition: color 0.2s
+    @media (prefers-color-scheme: dark)
+      color: $color_primary_100
     &:hover
       color: $color_primary_500
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_200
     &:active
       color: $color_primary_700
       transition: none
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_300
+
+blockquote
+  border-color: $color_grey_700
+  border-left-width: 4px
+  border-style: solid
+  @media (prefers-color-scheme: dark)
+    border-color: $color_grey_300
+  @media (min-width: $breakpoint_2)
+    transform: translateX(-4px)
+  span
+    display: block
+    font-style: italic
+    margin-top: 10px
 
 small
+  +body2
   display: block
-  font-size: 0.7rem
-  line-height: 1.5
 
 aside
   float: right
@@ -102,10 +127,12 @@ em
   font-style: italic
 
 figcaption
-  color: lighten(black, 35%)
+  color: $color_grey_500
   font-size: 0.7rem
   line-height: 1.4
-  margin-top: 0.5rem
+  margin-top: 10px
+  @media (prefers-color-scheme: dark)
+    color: lighten($color_grey_400, 3%)
 
   a
     border-width: 1px
@@ -115,9 +142,6 @@ figcaption
     &:active
       border-width: 2px
 
-blockquote
-  @extend .quote
-
 video
   &:focus
     outline: none
@@ -126,12 +150,12 @@ br
   line-height: 2rem
 
 hr
-  background: $color_grey_100
+  background: $color_grey_500
   border: none
   height: 2px
-  margin: 50px auto
-  width: 100px
+  margin: 80px auto
+  width: 60px
 
-img
+img, video
   height: auto
   max-width: 100%

@@ -3,7 +3,7 @@
   text-decoration: none
 
   h3
-    +h4
+    +heading4
     color: $color_grey_700
     margin-bottom: 10px
     @media (prefers-color-scheme: dark)
@@ -11,20 +11,16 @@
   p
     +body2
     color: $color_grey_500
+    font-weight: 500
     margin: 0
     @media (prefers-color-scheme: dark)
       color: $color_grey_300
 
-a.card
   &:hover
     h3
       color: $color_grey_800
       @media (prefers-color-scheme: dark)
         color: white
-    .cardMedia
-      img
-        transform: scale(1.02)
-        transition-delay: 0.3s
 
 .cardMedia
   background: $color_secondary_200
@@ -42,7 +38,6 @@ a.card
     display: block
     height: 100%
     object-fit: cover
-    transition: all .5s ease-out
     width: 100%
   video
     display: block

@@ -3,9 +3,9 @@
   max-width: 1600px
   @media (min-width: $breakpoint_1)
     display: grid
-    grid-template-columns: 1fr 1fr
-    grid-gap: 12px
     grid-auto-flow: columns
+    grid-gap: 12px
+    grid-template-columns: 1fr 1fr
     padding: 30px
 
 .disciplinesDiscipline
@@ -29,7 +29,7 @@
     border: none
     color: $color_grey_50
   h2
-    +h4
+    +heading4
   p
     +body1
     &:last-of-type
