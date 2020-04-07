@@ -43,6 +43,8 @@
     @media (min-width: $breakpoint_2)
       & + p
         margin-top: 10px
+  h4
+    +heading6
   h2, h3, h4, h5, p, ul, ol, blockquote
     margin-left: auto
     margin-right: auto
@@ -50,7 +52,12 @@
     padding: 0 16px
   ul, ol
     color: $color_grey_700
+    margin-bottom: 20px
+    margin-top: 20px
     padding-left: 40px
+    @media (min-width: $breakpoint_2)
+      margin-bottom: 30px
+      margin-top: 30px
     @media (prefers-color-scheme: dark)
       color: $color_grey_300
     li
