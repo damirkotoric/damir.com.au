@@ -4,25 +4,21 @@
   @media (min-width: $breakpoint_1)
     display: grid
     grid-auto-flow: columns
-    grid-gap: 12px
+    grid-gap: 24px
     grid-template-columns: 1fr 1fr
     padding: 30px
 
 .disciplinesDiscipline
-  background-color: white
+  background: $color_secondary_50
   background-size: cover
-  border-color: $color_secondary_200
-  border-style: solid
-  border-width: 1px 0 1px 0
   color: inherit
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin-bottom: 1px
+  margin-bottom: 10px
   overflow: hidden
   text-decoration: none
   @media (min-width: $breakpoint_1)
-    border-width: 1px
     margin-bottom: 0
   @media (prefers-color-scheme: dark)
     background-color: $color_grey_700
@@ -74,9 +70,6 @@
           height: 260px
           width: auto
   &#eCommerce
-    background-image: linear-gradient(-45deg, desaturate($color_secondary_500, 30%), desaturate($color_secondary_300, 30%))
-    @media (prefers-color-scheme: dark)
-      background: $color_grey_700
     .disciplinesDisciplineImage
       > svg
         display: block

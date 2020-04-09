@@ -16,4 +16,6 @@ $(document).ready(function() {
 
   // Init
   $(document.documentElement).addClass('-jsReady')
+  $('figure:not(.-full) img:not([data-no-zoom=""])').attr('data-zoomable', '')
+  mediumZoom('[data-zoomable]')
 })

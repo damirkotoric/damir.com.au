@@ -27,7 +27,7 @@
   box-sizing: border-box
 
 html, body
-  background-color: $color_secondary_50
+  background-color: white
   @media (prefers-color-scheme: dark)
     background-color: $color_grey_800
 
@@ -128,8 +128,9 @@ em
   font-style: italic
 
 figure
-  > img
-    background: $color_secondary_200
+  img, video
+    background: $color_secondary_100
+    border: 1px solid $color_secondary_100
     @media (prefers-color-scheme: dark)
       background: $color_grey_700
 
