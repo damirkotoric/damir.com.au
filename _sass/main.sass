@@ -133,6 +133,7 @@ figure
     border: 1px solid $color_secondary_100
     @media (prefers-color-scheme: dark)
       background: $color_grey_700
+      border-color: $color_secondary_900
 
 figcaption
   color: $color_grey_500
@@ -145,6 +146,8 @@ figcaption
   a
     border-width: 1px
     color: darken($color_grey_500, 5%)
+    @media (prefers-color-scheme: dark)
+      color: $color_grey_300
     &:hover
       border-width: 1px
     &:active
@@ -167,3 +170,11 @@ hr
 img, video
   height: auto
   max-width: 100%
+
+// Misc
+.medium-zoom--opened, .medium-zoom-overlay
+  @media (prefers-color-scheme: dark)
+    background-color: $color_grey_800 !important
+.medium-zoom-image--opened
+  object-fit: contain !important
+  object-position: 50% 50% !important

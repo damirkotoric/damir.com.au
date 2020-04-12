@@ -12,13 +12,18 @@
   transition: all 0.3s
   user-select: none
   white-space: nowrap
+  &:hover
+    color: $color_primary_400
+  &:active
+    color: $color_primary_600
+    transition: none
   @media (prefers-color-scheme: dark)
     color: $color_primary_200
-  &:hover
-    color: $color_primary_100
-  &:active
-    color: $color_primary_300
-    transition: none
+    &:hover
+      color: $color_primary_100
+    &:active
+      color: $color_primary_300
+      transition: none
 
   &.-text, &.-arrow
     border: none
