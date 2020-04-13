@@ -33,13 +33,13 @@
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   </head>
   <body class="page--{{ page.path | replace: ".html", "" }}">
-    <!-- {% include colourScheme.html %} -->
+    {% comment %}
+    {% include colourScheme.html %}
+    {% endcomment %}
     <div class="header">
       <div>
         <a class="headerLogo" href="/" aria-label="Home">
-          <div class="headerLogoBox"><span>D</span></div>
-          <div class="headerLogoBox"></div>
-          <div class="headerLogoBox"></div>
+          {% include logo.svg %}
         </a>
         <div class="headerBurger">
           <div class="headerBurgerContainer">
