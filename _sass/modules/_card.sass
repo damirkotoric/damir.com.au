@@ -5,7 +5,7 @@
   h3
     +heading4
     color: $color_grey_700
-    margin-bottom: 10px
+    margin-bottom: 12px
     @media (prefers-color-scheme: dark)
       color: $color_grey_50
   p
@@ -21,6 +21,24 @@
       color: $color_grey_800
       @media (prefers-color-scheme: dark)
         color: white
+
+.cardTags
+  +caption
+  color: $color_grey_500
+  list-style: none
+  margin: 0
+  @media (prefers-color-scheme: dark)
+    color: $color_grey_300
+
+  > li
+    border: 1px solid $color_grey_500
+    border-radius: 100px
+    display: inline-block
+    margin-bottom: 10px
+    margin-right: 6px
+    padding: 1px 8px 0
+    @media (prefers-color-scheme: dark)
+      border-color: $color_grey_300
 
 .cardMedia
   background: $color_secondary_200
