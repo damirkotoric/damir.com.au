@@ -162,9 +162,10 @@ $menuItems: 6
     transform: scale(1) translateY(0)
   &.-active
     a
-      color: black
-      @media (prefers-color-scheme: dark)
-        color: white
+      @media (min-width: $breakpoint_2)
+        color: black
+        @media (prefers-color-scheme: dark)
+          color: white
 
   .-menu-opened &
     transform: scale(1) translateY(0px)
