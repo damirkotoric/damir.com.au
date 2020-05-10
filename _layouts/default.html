@@ -13,10 +13,17 @@
     <meta property="og:description" content="{{ page.description }}">
     <meta property="og:url" content="https://damirkotoric.com">
     <meta property="og:site_name" content="Damir Kotorić">
-    <meta property="og:image" content="https://damirkotoric.com/assets/images/social.jpg">
+    {% if page.imageSrc %}
+      <meta property="og:image" content="https://damirkotoric.com{{ page.imageSrc }}">
+      <meta property="og:image:width" content="{{ page.imageWidth }}">
+      <meta property="og:image:height" content="{{ page.imageHeight }}">
+    {% else %}
+      <meta property="og:image" content="https://damirkotoric.com/assets/images/social.jpg">
+      <meta property="og:image:width" content="2000">
+      <meta property="og:image:height" content="1000">
+    {% endif %}
+    
     <meta property="og:image:alt" content="">
-    <meta property="og:image:width" content="2000">
-    <meta property="og:image:height" content="1000">
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Google Webmaster Tools verification (keep it here permanently) -->
