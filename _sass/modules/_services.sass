@@ -1,4 +1,4 @@
-.disciplines
+.services
   margin: 0 auto
   max-width: 1600px
   @media (min-width: $breakpoint_1)
@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 1fr
     padding: 30px
 
-.disciplinesDiscipline
+.servicesService
   background: $color_secondary_50
   background-size: cover
   color: inherit
@@ -38,12 +38,12 @@
       object-fit: fill
       width: 100%
   &#design
-    .disciplinesDisciplineImage
+    .servicesServiceImage
       padding: 10px 16px 40px 0
       @media (min-width: $breakpoint_2)
         padding: 30px 60px 40px 0
   &#designSprint
-    .disciplinesDisciplineImage
+    .servicesServiceImage
       img
         height: auto
         object-fit: fill
@@ -53,14 +53,18 @@
     color: white
     @media (prefers-color-scheme: dark)
       background-image: linear-gradient(-45deg, desaturate($color_primary_700, 30%), desaturate($color_primary_500, 30%))
-    .disciplinesDisciplineContent
+    .servicesServiceContent
       p
         color: $color_grey_200
-    .disciplinesDisciplineButton
-      color: $color_primary_100
+    .servicesServiceButton
+      color: white
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_100
       > svg
-        fill: $color_primary_100
-    .disciplinesDisciplineImage
+        fill: white
+        @media (prefers-color-scheme: dark)
+          fill: $color_primary_100
+    .servicesServiceImage
       > svg
         display: block
         height: 200px
@@ -70,7 +74,7 @@
           height: 260px
           width: auto
   &#eCommerce
-    .disciplinesDisciplineImage
+    .servicesServiceImage
       > svg
         display: block
         height: auto
@@ -85,7 +89,7 @@
           path
             fill: white
   &#development
-    .disciplinesDisciplineImage
+    .servicesServiceImage
       height: 100%
       margin-left: -5px
       padding: 0
@@ -97,12 +101,12 @@
         object-fit: cover
         object-position: 0% 0%
 
-.disciplinesDisciplineContent
+.servicesServiceContent
   padding: 30px 16px 0
   @media (min-width: $breakpoint_2)
     padding: 60px 80px 0 60px
 
-.disciplinesDisciplineImage
+.servicesServiceImage
   padding: 10px 16px 40px
   @media (min-width: $breakpoint_2)
     padding: 20px 60px 60px
