@@ -15,10 +15,10 @@
   position: relative
   z-index: 1
   @media (min-width: $breakpoint_1)
-    padding-top: 80px
+    padding-top: 60px
   h1
     color: $color_grey_900
-    margin-bottom: 20px
+    margin-bottom: 10px
     @media (prefers-color-scheme: dark)
       color: $color_grey_50
     .-post &
@@ -27,6 +27,7 @@
     +heading5
     color: $color_grey_500
     margin-bottom: 20px
+    margin-top: 20px
     @media (prefers-color-scheme: dark)
       color: $color_grey_400
     @media (min-width: $breakpoint_1)
@@ -58,6 +59,10 @@
       background: $color_primary_600
   @media (min-width: $breakpoint_1)
     margin-bottom: 10px
+
+.heroBack
+  display: block
+  margin-bottom: 5px
 
 #heroIndex
   > div
