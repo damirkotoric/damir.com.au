@@ -30,24 +30,6 @@
     +body1
     &:last-of-type
       margin-bottom: 0
-  &#design, &#development
-    img
-      border-radius: 0
-      box-shadow: none
-      height: auto
-      object-fit: fill
-      width: 100%
-  &#design
-    .servicesServiceImage
-      padding: 10px 16px 40px 0
-      @media (min-width: $breakpoint_2)
-        padding: 30px 60px 40px 0
-  &#designSprint
-    .servicesServiceImage
-      img
-        height: auto
-        object-fit: fill
-        width: 100%
   &#strategy
     background-image: linear-gradient(-45deg, desaturate($color_primary_500, 30%), desaturate($color_primary_300, 30%))
     color: white
@@ -68,26 +50,29 @@
       > svg
         display: block
         height: 200px
-        margin: 0 auto
+        margin: 0 auto 20px
         width: 160px
         @media (min-width: $breakpoint_2)
           height: 260px
           width: auto
-  &#eCommerce
+  &#design, &#development
+    img
+      border-radius: 0
+      box-shadow: none
+      height: auto
+      object-fit: fill
+      width: 100%
+  &#design
     .servicesServiceImage
-      > svg
-        display: block
+      padding: 10px 16px 40px 0
+      @media (min-width: $breakpoint_2)
+        padding: 30px 60px 40px 0
+  &#eCommerce, &#designSprint
+    .servicesServiceImage
+      img
         height: auto
-        margin: 0 auto
-        width: 200px
-        @media (min-width: $breakpoint_1)
-          margin-top: -60px
-        @media (min-width: $breakpoint_2)
-          margin-top: -210px
-          width: 360px
-        @media (prefers-color-scheme: dark)
-          path
-            fill: white
+        object-fit: fill
+        width: 100%
   &#development
     .servicesServiceImage
       height: 100%
