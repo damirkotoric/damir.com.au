@@ -15,6 +15,9 @@
   z-index: 1
   @media (min-width: $breakpoint_1)
     padding-top: 60px
+  h1, p
+    @media (min-width: $breakpoint_1)
+      // max-width: 30em
   h1
     color: $color_grey_900
     margin-bottom: 10px
@@ -25,15 +28,12 @@
   p
     +heading5
     color: $color_grey_500
-    margin-bottom: 20px
-    margin-top: 20px
+    margin-bottom: 12px
+    margin-top: 12px
     @media (prefers-color-scheme: dark)
       color: $color_grey_400
     @media (min-width: $breakpoint_1)
       margin-bottom: 30px
-      max-width: 30em
-      .-post &
-        max-width: none
     strong
       color: black
 
@@ -62,6 +62,33 @@
 .heroBack
   display: block
   margin-bottom: 5px
+
+.heroTitleLink
+  display: inline-block
+  height: 100%
+  opacity: 0.7
+  overflow: hidden
+  margin-bottom: 2px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 4px
+  &:hover
+    opacity: 1
+    svg
+      fill: $color_primary_500
+      @media (prefers-color-scheme: dark)
+        fill: $color_primary_200
+  span
+    align-items: center
+    display: flex
+  svg
+    height: 20px
+    width: 20px
+    fill: $color_grey_900
+    @media (prefers-color-scheme: dark)
+      fill: $color_grey_50
+    @media (min-width: $breakpoint_2)
+      height: 30px
+      width: 30px
 
 #heroIndex
   > div

@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Twipsum | Portfolio of Damir Kotorić"
+description: "A Twitter-to-lorem ipsum generator that I made as a side-project to learn Node.js front-end development."
+imageSrc: "/assets/images/twipsum-cover.jpg"
+imageWidth: 2000
+imageHeight: 1125
+---
+
+<div class="hero -post" id="heroPortfolio">
+  <div>
+    <div class="heroContent">
+      <a class="heroBack cardButton button -arrow" href="/portfolio">Portfolio{% include /svg/icon-chevron-right.svg %}</a>
+      <h1>Twipsum <a href="https://twipsum.herokuapp.com/" target="_blank" rel="noopener" class="heroTitleLink"><span>{% include /svg/icon-link.svg %}</span></a></h1>
+      <p>A Twitter-to-lorem ipsum generator that I made as a side-project to learn Node.js front-end development.</p>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <figure class="-full">
+    <img src="/assets/images/twipsum-cover.jpg" alt="" width="2000" height="1125">
+    <figcaption><a href="https://twipsum.herokuapp.com/" target="_blank" rel="noopener">Twipsum</a> was a small side project that I designed and built.</figcaption>
+  </figure>
+  <h2>Lorem ipsum dolor sit amet</h2>
+  <p>Placeholder text is often used by designers to design quickly before content is written. Design aficionados will <a href="https://blog.prototypr.io/why-testing-with-real-content-is-better-than-lorem-ipsum-c7c79586ee72" target="_blank" rel="noopener">argue that this is a bad habit</a>. And I agree for the most part, but I also can't deny the invaluable usefulness of "lorem ipsum" in certain situations. High brow debates about <a href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank">lorem ipsum</a> aside, it is undoubtedly the king of all placeholder text, and the design industry has fun creating all sorts of lorem ipsum generators. There's <a href="https://loremipsum.io/" target="_blank" rel="noopener">the classic</a>, but also <a href="https://hipsum.co/?paras=5&type=hipster-centric&start-with-lorem=1">hipster lipsum</a>, <a href="http://lorizzle.nl/?feed=1" target="_blank" rel="noopener">gangsta lipsum</a>, <a href="http://www.cupcakeipsum.com/#/paragraphs/5/length/long/with_love/false/start_with_cupcake/false/seed/d56055d94296c463758a4af64ebd6d533caa12ee6a74c995f3ac615f1d95f915" target="_blank" rel="noopener">cupcake lipsum</a>, and many others.</p>
+  <figure>
+    <img src="/assets/images/twipsum.jpg" alt="" width="2000" height="1109" data-no-zoom>
+    <figcaption>Pick, or search for a Twitter account, and placeholder text is generated for that account.</figcaption>
+  </figure>
+  <h2>Twitter + Lorem ipsum = Twipsum</h2>
+  <p>Wouldn't it be great if I could get placeholder text for a particular person? Say, a particular celebrity or public figure — and that was the birth of the idea behind Twipsum.</p>
+  <figure>
+    <img src="/assets/images/twipsum-sketching.jpg" alt="" width="2000" height="1333" data-no-zoom>
+    <figcaption>Scribbling ideas of how the UI will be laid out.</figcaption>
+  </figure>
+  <p>With Twipsum, you can quickly get placeholder text for your most loved, or hated, public figures. Because if you'll follow a <a href="https://www.smashingmagazine.com/2010/01/lorem-ipsum-killing-designs/" target="_blank" rel="noopener">design anti-pattern and use placeholder text instead of real text</a>, then you should do so in style.</p>
+  <figure>
+    <img src="/assets/images/twipsum-exploration.jpg" alt="" width="2000" height="1333" data-no-zoom>
+    <figcaption>Exploring the art direction and mocking up the home page.</figcaption>
+  </figure>
+  <p>The way Twipsum works is that on the server side, it talks to the Twitter servers via an API, and request a list of tweets from a particular user. That list of tweets is then formatted, and displayed on screen as Twitter lipsum. Not rocket science, but a good exercise in learning Node.js.</p>
+  <p><a href="https://twipsum.herokuapp.com/" target="_blank" rel="noopener" class="cardButton button -arrow">Visit Twipsum{% include /svg/icon-link.svg %}</a></p>
+  
+  <hr>
+  {% include portfolioPageFooter.html %}
+</div>
