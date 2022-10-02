@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Oracy | work of Damir Kotorić"
+description: "Free public domain audiobooks available for listening in a streamlined, simple UI. Oracy is a side project I designed and developed."
+imageSrc: "/assets/images/gizaAR-tomb-hieroglyphs-colour.jpg"
+imageWidth: 1600
+imageHeight: 900
+---
+
+<div class="hero -post" id="herowork">
+  <div>
+    <div class="heroContent">
+      <a class="heroBack cardButton button -arrow" href="/work">work{% include /svg/icon-chevron-right.svg %}</a>
+      <h1>Oracy</h1>
+      <p>Free public domain audiobooks available for listening in a streamlined, simple UI. Oracy is a side project I designed and developed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <figure class="-full">
+    <img src="/assets/images/oracy-cover.jpg" alt="" width="1600" height="900">
+    <figcaption></figcaption>
+  </figure>
+  <p><a href="https://librivox.org/" target="_blank" rel="noopener">Librivox</a> and <a href="https://archive.org/details/librivoxaudio" target="_blank" rel="noopener">archive.org</a> are great resources. They provide tens of thousands of public domain audiobooks, read by volunteers, free of charge. Librivox even has an app, but it doesn't quite measure up to the smooth user experience of a Spotify. So, I set out to build a "Spotify for audiobooks".</p>
+  <figure>
+    <div class="gallery">
+      <div class="galleryRow">
+        <div class="galleryItem">
+          <img src="/assets/images/oracy-light-dark-mobile.jpg" width="1600" height="1200" alt="">
+        </div>
+        <div class="galleryItem">
+          <img src="/assets/images/oracy-light-dark-desktop.jpg" width="1600" height="1200" alt="">
+        </div>
+      </div>
+    </div>
+    <figcaption>I love designing for dark UI support. Switch to and from dark mode on your device, and the UI here adapts automatically. Snazzy!</figcaption>
+  </figure>
+  <p>Oracy works by connecting to the archive.org server to retrieve the audiobook metadata and MP3 files, and it provides a streamlined UI — the user doesn't have to bother knowing about how things work in the background.</p>
+  <figure>
+    <div class="gallery">
+      <div class="galleryRow">
+        <div class="galleryItem">
+          <img src="/assets/images/oracy-audiobook-page.jpg" width="1600" height="1200" alt="">
+        </div>
+        <div class="galleryItem">
+          <img src="/assets/images/oracy-audiobook-page-2.jpg" width="1600" height="1200" alt="">
+        </div>
+      </div>
+    </div>
+    <figcaption>Ideating on a sustainable revenue model. Using contextual product placements, a referral is earned from sites like Amazon, Alibaba, and Redbubble.</figcaption>
+  </figure>
+  <p>Using Node.js, the app calls <a href="http://blog.archive.org/developers/" target="_blank" rel="noopener">the archive.org API</a>, and retrieves all the relevant data.</p>
+  <figure>
+    <img src="/assets/images/oracy-code.jpg" width="1600" height="1200" alt="">
+    <figcaption>The Node.js app that runs Oracy. <a href="https://github.com/Team-Oracy/oracy">Source code.</a></figcaption>
+  </figure>
+  <p>The front end was initially just simple HTML, CSS, jQuery, and Handlebars. Eventually my Booking.com colleague <a href="https://www.linkedin.com/in/ciprianofreitas" target="_blank" rel="noopener">Cipriano Freitas</a> joined the project, and helped me build the web app in React.js.</p>
+  {% include workPageFooter.html %}
+</div>

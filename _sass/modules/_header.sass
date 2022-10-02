@@ -10,6 +10,12 @@ $menuItems: 6
   transition-delay: 0.2s
   z-index: 100
 
+  .page--index &
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+
   > div
     margin-top: 10px
     @media (min-width: $breakpoint_1)
@@ -37,7 +43,7 @@ $menuItems: 6
   user-select: none
   width: 60px
   @media (min-width: $breakpoint_2)
-    margin-left: 20px
+    display: none
   .-menu-opened &
     opacity: 0
     pointer-events: none
@@ -141,10 +147,12 @@ $menuItems: 6
   @media (min-width: $breakpoint_2)
     align-items: center
     display: flex
+    justify-content: center
     pointer-events: auto
     position: relative
     right: inherit
     top: inherit
+    width: 100%
   .-menu-opened &
     pointer-events: auto
 
@@ -152,7 +160,7 @@ $menuItems: 6
   margin-top: 5px
   transform: scale(1.1) translateY(-20px)
   opacity: 0
-  padding: 0px 48px 0
+  padding: 0px 48px
   position: relative
   transition: transform 0.3s $cubic, opacity 0.4s $cubic
   @media (min-width: $breakpoint_2)
@@ -193,9 +201,8 @@ $menuItems: 6
       color: $color_grey_300
     @media (min-width: $breakpoint_2)
       font-size: 18px
-      padding: 0 4px
       height: 100px
-      padding: 0 20px
+      padding: 0 28px
     &:hover
       color: black
       transition: color 0.2s
