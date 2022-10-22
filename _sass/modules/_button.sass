@@ -6,7 +6,8 @@
   color: $color_primary_500
   display: inline-block
   font-weight: 500
-  padding: 15px 20px
+  line-height: 1
+  padding: 16px 24px
   position: relative
   text-decoration: none
   transition: all 0.3s
@@ -74,3 +75,9 @@
     color: $color_primary_300
     > svg
       fill: $color_primary_300
+
+  &.-small
+    +body2
+    border-width: 2px
+    line-height: 1
+    padding: 14px 18px

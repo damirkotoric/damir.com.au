@@ -1,0 +1,59 @@
+.intro
+  +container
+  padding-bottom: 0
+  @media (min-width: $breakpoint_2)
+    padding-bottom: 0
+  > div
+    background: $color_secondary_50
+    padding-bottom: 40px
+    padding-top: 40px
+    @media (prefers-color-scheme: dark)
+      background-color: $color_grey_700
+    @media (min-width: $breakpoint_2)
+      margin-top: 32px
+      padding: 60px 80px 80px
+
+.introTitle
+  +overline
+  margin-bottom: 20px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 20px
+
+.introContent
+  &::after
+    clear: both
+    content: ''
+    display: block
+  p
+    +body2
+
+.introContentText, .introContentVideo
+  float: left
+
+.introContentText
+  padding-right: 64px
+  width: 50%
+  p:first-child
+    margin-top: 0 !important
+  p:last-child
+    margin-bottom: 0 !important
+
+.introContentVideo
+  margin-top: -20px
+  position: relative
+  width: 50%
+  &::after
+    background: linear-gradient(-60deg, #270c89, #ede0de)
+    border-radius: 6px
+    content: ''
+    height: calc(100% - 20px)
+    left: 0
+    position: absolute
+    top: 0
+    width: calc(100% - 20px)
+    z-index: 0
+  video
+    border-radius: 6px
+    margin: 20px 0 0 20px
+    position: relative
+    z-index: 1
