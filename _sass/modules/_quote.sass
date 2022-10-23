@@ -42,7 +42,7 @@
   +heading4
   background-color: $color_grey_600
   /* Create the gradient. */
-  background-image: linear-gradient(-20deg, $color_grey_600, mix($color_primary_500, $color_grey_600, 30%))
+  background-image: linear-gradient(-20deg, $color_grey_600, mix($color_primary_500, $color_grey_600, 20%))
   /* Set the background size and repeat properties. */
   background-size: 100%
   background-repeat: repeat
@@ -57,6 +57,7 @@
   margin-top: 10px
   @media (prefers-color-scheme: dark)
     color: $color_grey_200
+    background-image: linear-gradient(-20deg, mix($color_grey_200, $color_primary_500, 60%), $color_grey_200)
 
 .quoteAuthor
   align-items: center

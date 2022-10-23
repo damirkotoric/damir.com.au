@@ -1,69 +1,59 @@
 .hero
-  +container
-  overflow: hidden
-  position: relative
   > div
-    padding-bottom: 20px
+    padding: 0 16px 20px
+    position: relative
     @media (min-width: $breakpoint_2)
-      padding: 0 80px
+      padding: 40px 80px 0
 
 .heroContent
-  padding-top: 40px
   position: relative
   text-align: center
   z-index: 1
   h1
+    +heading2
     color: $color_grey_900
-    margin-bottom: 10px
+    background-image: linear-gradient(-20deg, $color_grey_900, mix($color_grey_500, $color_primary_500, 90%))
+    margin-bottom: 16px
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     @media (prefers-color-scheme: dark)
-      color: $color_grey_50
-    .-post &
-      +heading2
+      color: white
+      background-image: linear-gradient(-20deg, $color_grey_300, white)
   p
     +heading5
-    color: $color_grey_500
-    margin-bottom: 12px
-    margin-top: 12px
+    color: mix($color_grey_500, $color_primary_500, 90%)
+    margin-bottom: 20px
     @media (prefers-color-scheme: dark)
       color: $color_grey_300
     @media (min-width: $breakpoint_1)
-      margin: 0 auto 30px
-      max-width: 800px
+      margin: 0 auto 20px
+      max-width: 640px
+    @media (min-width: $breakpoint_2)
+      margin-bottom: 32px
+      max-width: 1040px
 
 .heroBack
   display: block
   margin-bottom: 5px
 
 #heroIndex
-  border-bottom: 1px solid $color_grey_100
+  border-bottom: 1px solid $color_grey_200
+  @media (prefers-color-scheme: dark)
+    border-color: $color_grey_800
+  @media (min-width: $breakpoint_2)
+    border-color: $color_grey_100
+    @media (prefers-color-scheme: dark)
+      border-bottom-color: $color_grey_700
   > div
-    @media (min-width: $breakpoint_1)
-      align-items: center
-      display: flex
-      justify-content: center
-      margin-bottom: 40px
+    padding: 100px 16px 80px
     @media (min-width: $breakpoint_2)
-      padding: 400px 80px 0
+      padding: 200px 16px 140px
   .heroContent
     h1
-      line-height: 0.88
-      font-size: 44px
-      @media (min-width: $breakpoint_2)
-        font-size: 80px
-      @media (min-width: $breakpoint_3)
-        font-size: 150px
-        margin-top: 120px
-    p
-      +heading6
-      color: $color_grey_900
-      opacity: 0.6
-      @media (min-width: $breakpoint_1)
-        margin: 0 auto 24px
-    @media (min-width: $breakpoint_1)
+      +heading1
+    @media (min-width: $breakpoint_2)
       flex-grow: 1
-      padding-right: 40px
-      padding-top: 40px
-  .heroTitle, .heroBackground
+  .heroBackground
     &, &::after, video
       left: 0
       top: 0
@@ -72,31 +62,11 @@
       width: 100%
     video
       object-fit: cover
-  .heroTitle
-    -webkit-mask-image: url(/assets/images/damir-black.svg)
-    -webkit-mask-position: 50% 160px
-    -webkit-mask-repeat: no-repeat
-    z-index: 1
-    h1
-      z-index: 100
-      position: absolute
-      top: 160px
-      left: 50%
-      transform: translateX(-50%)
-      opacity: 0.5
-  .heroTitleLight
-    display: block
-    @media (prefers-color-scheme: dark)
-      display: none
-  .heroTitleDark
-    display: none
-    @media (prefers-color-scheme: dark)
-      display: block
   .heroBackground
     z-index: 0
-    &::after
-      background: rgba(255, 255, 255, 0.85)
-      backdrop-filter: blur(5px)
+    &:after
+      background: rgba(255, 255, 255, 0.80)
       content: ''
+      display: block
       @media (prefers-color-scheme: dark)
-        background: rgba(0, 0, 0, 0.85)
+        background: rgba(0, 0, 0, 0.80)

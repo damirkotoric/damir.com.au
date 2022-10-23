@@ -45,9 +45,9 @@
     {% endcomment %}
     <div class="header">
       <div>
-        <a class="headerLogo" href="/" aria-label="Home">
+        <!-- <a class="headerLogo" href="/" aria-label="Home">
           {% include logo.svg %}
-        </a>
+        </a> -->
         <div class="headerBurger">
           <div class="headerBurgerContainer">
             <div class="headerBurgerContainerBar -topBar"></div>
@@ -57,7 +57,7 @@
         <div class="headerMenu">
           <div class="headerMenuItem {% if page.activeNav == 1 %}-active{% endif %}"><a href="/">Overview</a></div>
           <div class="headerMenuItem {% if page.activeNav == 2 %}-active{% endif %}"><a href="/work">Work</a></div>
-          <div class="headerMenuItem {% if page.activeNav == 4 %}-active{% endif %}"><a href="/about">Writing</a></div>
+          <div class="headerMenuItem {% if page.activeNav == 4 %}-active{% endif %}"><a href="/articles">Articles</a></div>
           <div class="headerMenuItem {% if page.activeNav == 5 %}-active{% endif %}"><a href="" target="_blank">Become a Client</a></div>
         </div>
       </div>

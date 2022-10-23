@@ -33,7 +33,28 @@
 
   background: linear-gradient(unquote($direction), $stops)
 
-.crisp-client
+@mixin clearfix
+  &:after
+    clear: both
+    content: ''
+    display: block
+
+.showOnAndAboveBreakpoint1
   display: none
-  body.-showingCrisp &
+  @media (min-width: $breakpoint_1)
+    display: block
+
+.showOnAndAboveBreakpoint2
+  display: none
+  @media (min-width: $breakpoint_2)
+    display: block
+
+.showOnAndAboveBreakpoint3
+  display: none
+  @media (min-width: $breakpoint_3)
+    display: block
+
+.showOnAndAboveBreakpoint4
+  display: none
+  @media (min-width: $breakpoint_4)
     display: block

@@ -1,0 +1,40 @@
+.callout
+  background: $color_grey_600
+  background: linear-gradient(-20deg, mix($color_primary_900, $color_grey_600, 50%), $color_grey_600)
+  border: 1px solid $color_grey_200
+  border-radius: 8px
+  box-shadow: 0 5px 20px rgba($color_grey_500, 0.4)
+  margin: 0 16px
+  max-width: 800px
+  padding: 16px 24px 24px
+  @media (prefers-color-scheme: dark)
+    border-color: $color_grey_500
+  @media (min-width: $breakpoint_2)
+    align-items: center
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    padding: 24px 32px
+
+.calloutImage
+  margin-bottom: 4px
+  padding-right: 24px
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 0
+  > svg
+    width: 40px
+    > path
+      fill: $color_grey_200
+
+.calloutContent
+  color: $color_grey_200
+  h6
+    margin-bottom: 8px
+  p
+    +body2
+    color: $color_grey_200
+    margin: 0
+  a
+    color: $color_primary_100
+  .button
+    margin-top: 16px

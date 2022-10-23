@@ -1,0 +1,80 @@
+.article
+  display: block
+  margin: 0 auto
+  max-width: 800px
+  padding: 0 16px
+  text-decoration: none
+  &:hover
+    .articleImage
+      border-color: $color_grey_300
+      @media (prefers-color-scheme: dark)
+        border-color: $color_grey_600
+    .articleTitle
+      color: $color_primary_800
+      @media (prefers-color-scheme: dark)
+        color: $color_primary_100
+    .articleSubtitle
+      color: $color_grey_700
+      @media (prefers-color-scheme: dark)
+        color: $color_grey_300
+  @media (min-width: $breakpoint_2)
+    +clearfix
+    padding-left: 0
+    padding-right: 0
+
+.articleImage
+  border: 1px solid $color_grey_200
+  margin-bottom: 8px
+  @media (prefers-color-scheme: dark)
+    border-color: $color_grey_700
+  @media (min-width: $breakpoint_2)
+    float: left
+    height: 120px
+    margin-bottom: 0
+    margin-top: 6px
+    width: 120px
+  > img
+    display: block
+    height: 100%
+    margin-right: 24px
+    width: 100%
+    @media (min-width: $breakpoint_2)
+      object-fit: cover
+
+.articleContent
+  @media (min-width: $breakpoint_2)
+    margin-left: 140px
+
+.articleTitle
+  +heading6
+  margin-bottom: 2px
+  @media (prefers-color-scheme: dark)
+    color: $color_primary_200
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 0
+
+.articleSubtitle
+  +body2
+  color: $color_grey_600
+  margin-bottom: 4px
+  @media (prefers-color-scheme: dark)
+    color: $color_grey_400
+  @media (min-width: $breakpoint_2)
+    margin-bottom: 0
+
+.articleLogoLight, .articleLogoDark
+  margin-top: 8px
+  > img
+    display: block
+    max-height: 28px
+    max-width: 64px
+
+.articleLogoLight
+  display: block
+  @media (prefers-color-scheme: dark)
+    display: none
+
+.articleLogoDark
+  display: none
+  @media (prefers-color-scheme: dark)
+    display: block

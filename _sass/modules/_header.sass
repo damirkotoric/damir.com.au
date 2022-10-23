@@ -29,6 +29,7 @@ $menuItems: 4
       padding: 0 60px 0 40px
 
   .-menu-opened &
+    background: white
     height: 100vh
     transition: all 0.3s ease-in
     transition-delay: 0.25s
@@ -157,10 +158,10 @@ $menuItems: 4
 
 .headerMenuItem
   margin-top: 5px
-  transform: scale(1.1) translateY(-20px)
   opacity: 0
-  padding: 0px 48px
+  padding: 16px 48px
   position: relative
+  transform: scale(1.1) translateY(-20px)
   transition: transform 0.3s $cubic, opacity 0.4s $cubic
   @media (min-width: $breakpoint_2)
     margin: 0 24px
@@ -169,11 +170,13 @@ $menuItems: 4
     transform: scale(1) translateY(0)
   &.-active
     a
-      border-bottom: 2px solid $color_grey_600
+      color: black
+      @media (prefers-color-scheme: dark)
+        color: white
       @media (min-width: $breakpoint_2)
-        color: black
+        border-bottom: 2px solid $color_grey_600
         @media (prefers-color-scheme: dark)
-          color: white
+          border-bottom: 2px solid $color_grey_300
 
   .-menu-opened &
     transform: scale(1) translateY(0px)

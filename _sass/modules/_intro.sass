@@ -6,7 +6,7 @@
   > div
     background: $color_secondary_50
     padding-bottom: 40px
-    padding-top: 40px
+    padding-top: 32px
     @media (prefers-color-scheme: dark)
       background-color: $color_grey_700
     @media (min-width: $breakpoint_2)
@@ -27,23 +27,27 @@
   p
     +body2
 
-.introContentText, .introContentVideo
-  float: left
-
 .introContentText
-  padding-right: 64px
-  width: 50%
+  @media (min-width: $breakpoint_2)
+    float: left
+    padding-right: 64px
+    width: 40%
   p:first-child
     margin-top: 0 !important
   p:last-child
     margin-bottom: 0 !important
 
 .introContentVideo
-  margin-top: -20px
+  margin: 0 0 16px
+  padding: 12px 0 0 12px
   position: relative
-  width: 50%
+  @media (min-width: $breakpoint_2)
+    float: right
+    margin-top: -20px
+    padding: 20px 0 0 20px
+    width: 60%
   &::after
-    background: linear-gradient(-60deg, #270c89, #ede0de)
+    background: linear-gradient(-60deg, $color_primary_500, $color_grey_200)
     border-radius: 6px
     content: ''
     height: calc(100% - 20px)
@@ -52,8 +56,9 @@
     top: 0
     width: calc(100% - 20px)
     z-index: 0
+    @media (prefers-color-scheme: dark)
+      background: linear-gradient(-60deg, $color_primary_800, $color_grey_400)
   video
     border-radius: 6px
-    margin: 20px 0 0 20px
     position: relative
     z-index: 1
